@@ -1,0 +1,411 @@
+/* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
+
+/* inject:imports */
+/* endinject */
+
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,500i,600,600i,700,700i,800,800i');
+
+$p-size: 12pt;
+$grey: #d1d1d1;
+$blue: #ff8600; //actually orange
+//$blue: #007acc;
+
+%border-props{
+	border-style: solid;
+	border-color: $grey;
+	border-width: 1px;
+	}
+
+%padding-highlight{
+	padding-top: .125em;
+	padding-bottom: .125em;
+	padding-right: .25em;
+	padding-left: .25em;
+	}
+
+
+html {
+  //  height: 100%;
+
+//////////////////////////////////////////
+/////////////WRAPPER/////////////////////
+////////////////////////////////////////
+#wrapper{
+
+	font-family: merriweather, georgia;
+	background-color: rgb(32, 32, 32);
+	line-height: 1.75;
+	font-size: $p-size;
+
+	::selection{
+		color: #fff;
+		background: $blue;
+	}
+	::-moz-selection{
+		color: #fff;
+		backgorund: $blue;
+	}
+
+	&::before{
+		top: 0; //64 is the height of the control menu, try to see if there is a dynamic way of doing this.
+		height: 21px + 64px;
+		}
+
+	&::before, &::after{
+		background: inherit;
+		content: "";
+		display: block;
+		left: 0;
+		position: fixed;
+		width: 100%;
+		z-index: 99;
+
+		}
+
+	&::after{
+		bottom: 0;
+		height: 21px;
+		}
+
+	#wrapper2{
+		background-color: rgb(255, 255, 255);
+		padding: 20px;
+		}
+
+	a{
+		text-decoration: underline;
+		color: $blue;
+		&:hover{
+			text-decoration: none;
+			color: $grey;
+			}
+		}
+
+
+	li{
+		a{
+			color: $blue;
+			text-decoration: none;
+			}
+		}
+
+	// more efficient way of selecting this by type?
+	input[type=password], [type=text], [type=url], [type=email], [type=tel], [type=search], [type=number], [type=color], [type=number], [type=range], [type=date], [type=month], [type=week], [type=datetime], [type=datetime-local], textarea{
+		@extend %border-props;
+		border-radius: 1px;
+		//font-size: $p-size - 2pt;
+		background-color: #F5F5F5;
+		//opacity: .6;
+		padding-left: .5em;
+
+		&::placeholder, &[value]{
+			font-family: montserrat;
+			font-size: $p-size - 2pt;
+			}
+
+		&:focus{
+			background-color: #FFF;
+			border-color: $blue;
+			box-shadow: 0 0 5px $blue;
+			outline: none;
+			}
+		}
+
+	//input buttons
+	input[type=submit],[type=button],[type=reset], button{
+		@extend %border-props;
+		border-radius: 3px;
+		background-color: #fff;
+		color: $blue;
+		&:hover{
+			background-color: #f5f5f5;
+			}
+		}
+		// a{
+		// 	&:hover{
+		// 		color: $blue;
+		// 	}
+
+		// }
+}
+
+@media (max-width: 767px){
+	#wrapper{
+		background-color: #fff;
+	}
+}
+//////////////////////////////////////////
+/////////////BANNER//////////////////////
+////////////////////////////////////////
+#banner{
+	margin-bottom: 10%;
+	//display: block;
+	//padding: 5%;
+	font-family: montserrat;
+	line-height: 1.5;
+
+	#rowwrapper{
+		width: 100%;
+	}
+
+
+
+	#heading{
+		display: inline;
+
+		span{
+			font-weight: 700;
+			font-size: $p-size + 32pt;
+			color: $blue;
+
+		}
+		
+		p{
+			color: #000;
+			font-weight: normal;
+			font-style: italic;
+			font-size: $p-size;
+		}
+
+		button{
+			font-weight: 700;
+			span{
+				font-size: $p-size;
+			}
+		}
+	}
+
+	//dropdown navigation menu
+
+	.navbar-collapse.in{
+		overflow: visible;
+		}
+
+	nav{
+	
+		ul{
+			list-style: none outside none;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			padding: 0;
+			color: rgb(0,0,0);
+
+			
+
+			li{
+				font-weight: 700;
+				padding: 10px;
+				// add bootstrap for the down symbol.
+				a{
+					color: #000;
+					font-size: $p-size;
+					text-decoration: none;
+
+					i{
+						font-size: $p-size - 4pt;
+					}
+
+					&:hover{
+						text-decoration: none;
+						color: $blue;
+						}
+					}
+
+				ul{
+					text-align: center;
+
+					li{
+						background-color: #FFF;
+
+						a{
+							color: inherit;
+							text-decoration: none;
+							font-weight: normal;
+							text-align: left;
+
+							&:hover{
+								color: $blue;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	@media (max-width: 767px){
+		#parent-a{
+			display: inline-block;
+			width: 80%;
+		}
+
+		#heading span{
+			font-size: $p-size + 4pt;
+		}
+
+		nav ul li a i{
+				font-size: $p-size;
+			}
+
+		li{
+			border-top: 1px solid $grey;
+			border-bottom: 1px solid $grey;
+
+			li{
+				border: none;
+				}
+			}
+		}
+}
+
+
+
+//////////////////////////////////////////
+/////////////CONTENT/////////////////////
+////////////////////////////////////////
+#content{
+	display: block;
+
+	h1, h2, h3, h4, h5, h6{
+		font-family: merriweather;
+		font-weight: 700;
+		}
+
+			//blockquote
+	blockquote{
+		font-style: italic;
+		color: gray;
+		border-left: 5px solid #000000;
+		}
+
+	//table
+	table{
+		font-size: 75%;
+		
+
+		caption{
+			font-style: italic;
+			}
+
+		thead, tbody, tfoot{
+			vertical-align: middle;
+			border-color: inherit;
+			}
+
+		th, td{
+			@extend %border-props;
+			padding: 7px;
+			text-align: left;
+			}
+		}
+
+	ul{
+		list-style: disc;
+		}
+
+	address{
+		font-style: italic;
+		}
+
+	cite{
+		font-style: normal;
+
+		&::before{
+			content: '\2014\00a0';
+			}
+		}	
+
+	//should i even change?
+	code{
+		@extend %padding-highlight;
+		background-color: $grey;
+		font-family: inconsolata, monospace;
+		word-wrap: break-word;
+		}
+
+	ins{
+		@extend %padding-highlight;
+		background: $blue;
+		color: #fff;
+		text-decoration: none;
+		}
+
+	// should i even change?
+	kbd{
+		color: $grey;
+		}
+
+	pre{
+		@extend %border-props;
+		line-height: 1.3125em;
+		max-width: 100%;
+		overflow: auto;
+		padding: 1.75em;
+		white-space: pre-wrap;
+		word-wrap:break-word;
+		background-color: #fff;
+
+		//border-radius 0px;
+		}
+
+	var{
+		font-family: inconsolata, monospace;
+		font-style: italic;
+		}
+
+	figure{
+
+		position: relative;
+		overflow: hidden;
+		margin: 0px;
+		//border: 1px solid #000;
+		width: 200px;
+
+		img{
+			max-width: 100%;
+
+			-moz-transition: all 0.3s;
+  			-webkit-transition: all 0.3s;
+  			transition: all 0.3s;
+  			z-index: 300;
+		}
+
+		figcaption{
+			display: inline-block;
+			height: 30px;
+			z-index: 301;
+			background-color: #fff;
+		}
+
+		&:hover{
+			img{
+				-moz-transform: scale(1.1);
+				-webkit-transform: scale(1.1);
+				transform: scale(1.1);
+				border-color: $blue;
+			figcaption{
+				color: $blue;
+				font-style: italic;
+
+				}
+			}
+		}
+	}
+}
+
+
+
+//////////////////////////////////////////
+/////////////FOOTER//////////////////////
+////////////////////////////////////////
+#footer{
+	text-family: merriweather;
+}
+
+//////////////////////////////////////////
+/////////////MEDIA Q//////////////////////
+////////////////////////////////////////
+
+}
