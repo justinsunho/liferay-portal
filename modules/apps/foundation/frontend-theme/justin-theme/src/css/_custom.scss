@@ -26,15 +26,21 @@ $blue: #ff8600; //actually orange
 	padding-left: .25em;
 	}
 
+%form-focus{
+	background-color: #FFF;
+	border-color: $blue;
+	box-shadow: 0 0 5px $blue;
+	outline: none;
+}
 
 html {
-  //  height: 100%;
 
+	height: 100%;
 //////////////////////////////////////////
 /////////////WRAPPER/////////////////////
 ////////////////////////////////////////
 #wrapper{
-
+	height: 100%;
 	font-family: merriweather, georgia;
 	background-color: rgb(32, 32, 32);
 	line-height: 1.75;
@@ -51,7 +57,7 @@ html {
 
 	&::before{
 		top: 0; //64 is the height of the control menu, try to see if there is a dynamic way of doing this.
-		height: 21px + 64px;
+		height: 96px;
 		}
 
 	&::before, &::after{
@@ -67,7 +73,7 @@ html {
 
 	&::after{
 		bottom: 0;
-		height: 21px;
+		height: 24px;
 		}
 
 	#wrapper2{
@@ -107,10 +113,7 @@ html {
 			}
 
 		&:focus{
-			background-color: #FFF;
-			border-color: $blue;
-			box-shadow: 0 0 5px $blue;
-			outline: none;
+			@extend %form-focus;
 			}
 		}
 
@@ -124,6 +127,16 @@ html {
 			background-color: #f5f5f5;
 			}
 		}
+
+	select{
+		background-color: #f5f5f5;
+		&:focus{
+			@extend %form-focus;
+		}
+	}
+
+
+
 		// a{
 		// 	&:hover{
 		// 		color: $blue;
@@ -137,24 +150,39 @@ html {
 		background-color: #fff;
 	}
 }
+
 //////////////////////////////////////////
 /////////////BANNER//////////////////////
 ////////////////////////////////////////
+	.nav-up {
+    	top: -100px;
+	}
+
+	.nav-down{
+		top: 85px;
+	}
+
 #banner{
-	margin-bottom: 10%;
-	//display: block;
-	//padding: 5%;
+	background-color: #fff;
+	z-index: 10;
+	position: fixed;
 	font-family: montserrat;
 	line-height: 1.5;
+  	width: 92.5%;
+  	padding: 20px;
+
+  	  	transition: top 0.2s ease-in-out;
 
 	#rowwrapper{
 		width: 100%;
 	}
 
-
-
 	#heading{
 		display: inline;
+
+		#rowwrapper{
+			background: url('https://d2r55xnwy6nx47.cloudfront.net/uploads/2018/02/QC_QuantumSupremacy_2880x1620-2880x1620.jpg');
+		}
 
 		span{
 			font-weight: 700;
@@ -185,14 +213,13 @@ html {
 		}
 
 	nav{
-	
+
 		ul{
 			list-style: none outside none;
-			margin-top: 0px;
+			margin-top: 5px;
 			margin-bottom: 0px;
 			padding: 0;
 			color: rgb(0,0,0);
-
 			
 
 			li{
@@ -212,10 +239,23 @@ html {
 						text-decoration: none;
 						color: $blue;
 						}
-					}
 
+					&[aria-expanded="true"]{
+						.icon-chevron-left{
+							display: none;
+							}
+						}	
+					&[aria-expanded="false"]{
+						.icon-chevron-down{
+							display: none;
+							}
+						}	
+									
+					}
+					
 				ul{
-					text-align: center;
+					overflow: visible;
+					text-align: center; 
 
 					li{
 						background-color: #FFF;
@@ -229,6 +269,7 @@ html {
 							&:hover{
 								color: $blue;
 								}
+
 							}
 						}
 					}
@@ -242,21 +283,14 @@ html {
 		}
 
 		#heading span{
-			font-size: $p-size + 4pt;
+			font-size: $p-size + 12pt;
 		}
+
 
 		nav ul li a i{
 				font-size: $p-size;
 			}
 
-		li{
-			border-top: 1px solid $grey;
-			border-bottom: 1px solid $grey;
-
-			li{
-				border: none;
-				}
-			}
 		}
 }
 
@@ -266,7 +300,9 @@ html {
 /////////////CONTENT/////////////////////
 ////////////////////////////////////////
 #content{
+	z-index: 1;
 	display: block;
+	padding-top: 15%;
 
 	h1, h2, h3, h4, h5, h6{
 		font-family: merriweather;
@@ -355,6 +391,8 @@ html {
 		font-style: italic;
 		}
 
+
+		// for links with thumbnails. NOT pure img.
 	figure{
 
 		position: relative;
@@ -363,19 +401,16 @@ html {
 		//border: 1px solid #000;
 		width: 200px;
 
-		img{
-			max-width: 100%;
-
+		img{			
+			width: 100%;
 			-moz-transition: all 0.3s;
   			-webkit-transition: all 0.3s;
   			transition: all 0.3s;
-  			z-index: 300;
-		}
+  			}		
 
 		figcaption{
 			display: inline-block;
 			height: 30px;
-			z-index: 301;
 			background-color: #fff;
 		}
 
@@ -401,7 +436,22 @@ html {
 /////////////FOOTER//////////////////////
 ////////////////////////////////////////
 #footer{
-	text-family: merriweather;
+	font-family: montserrat;
+	ul{
+		text-align: right;
+		list-style: none outside none;
+
+		li{
+			margin: 12px;
+			display: inline;
+
+			div{
+				display: inline;
+
+			}
+		}
+	}
+
 }
 
 //////////////////////////////////////////

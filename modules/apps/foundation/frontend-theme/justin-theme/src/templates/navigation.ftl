@@ -1,4 +1,4 @@
-<div class="navbar-collapse" id="navbarSupportedContent">
+<div class="navbar-collapse collapse" id="navbarSupportedContent">
 <nav class="${nav_css_class}" id="navigation" role="navigation">
 
 
@@ -28,7 +28,7 @@
 			<#elseif nav_item.hasChildren()>
 				<li class="dropdown" role="menu">
 					<a aria-labelledby="layout_${nav_item.getLayoutId()}" ${nav_item_attr_has_popup} href="${nav_item.getURL()}" ${nav_item.getTarget()} role="menuitem" id="parent-a"><span><@liferay_theme["layout-icon"] layout=nav_item_layout /> ${nav_item.getName()}</span></a>
-					 <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#"> <i class="icon-chevron-down"></i> </a>
+					 <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#"> <i class="icon-chevron-left"></i><i class="icon-chevron-down"></i> </a>
 
 
 					<ul class="dropdown-menu">
