@@ -6,73 +6,53 @@ AUI().ready(
 	*/
 
 	function(){
-		let i = 0;
-			
-		var button = document.getElementById('btnCollapse');	
-		var text = document.getElementById('btnChild');
 
-		function changeButtonColor(){
-			i++;
-			console.log(i);
-			if(i % 2 == 1){
-				button.style.backgroundColor = '#ff8600';
-				text.style.color = '#FFF';
-			}else{
-				button.style.backgroundColor = '';
-				text.style.color = '';
-				}
-			}
-
-		$("#btnCollapse").click(changeButtonColor);
-	
-
-		// Hide Header on on scroll down
-		var didScroll;
+		var scrolling;
 		var lastScrollTop = 0;
-		var delta = 5;
-		var navbarHeight = $("#banner").outerHeight();
+		var delta = 10;
+		var navbarHeight = $('#banner').outerHeight();
 
-		$(window).scroll(function(event){
-		    didScroll = true;
+		$(window).scroll( function (event) {
+		    scrolling = true;
 		});
 
 		setInterval(function() {
-			console.log(navbarHeight);
-		    if (didScroll) {
-		        hasScrolled();
-		        didScroll = false;
+		    if (scrolling) {
+		        moveBar();
+		        scrolling = false;
 		    }
 		}, 250);
 
-		function hasScrolled() {
+		function moveBar() {
 		    var st = $(this).scrollTop();
 		    
 		    // Make sure they scroll more than delta
-		    if(Math.abs(lastScrollTop - st) <= delta){
+		    if (Math.abs(lastScrollTop - st) <= delta){
 		        return;
 		    }
 		    
 		    // If they scrolled down and are past the navbar, add class .nav-up.
-		    // This is necessary so you never see what is "behind" the navbar.
+		    // This is necessary so you never see what is 'behind' the navbar.
 		    if (st > lastScrollTop && st > navbarHeight){
 		        // Scroll Down
-		        $("#banner").removeClass("nav-down").addClass("nav-up");
-	            if($("#navbarSupportedContent").attr("class") == "navbar-collapse collapse in"){	
-	            	$("#navbarSupportedContent").attr("class","navbar-collapse collapse");
-	            	changeButtonColor();
-		    		}
-		    } else {
-		        // Scroll Up
-		        if(st + $(window).height() < $(document).height()) {
-		        	console.log('7');
-		            $("#banner").removeClass("nav-up").addClass("nav-down");
+		        $('#banner').removeClass('nav-down').addClass('nav-up');
 
+	            if ($('#navbarSupportedContent').attr('class') == 'navbar-collapse collapse in'){	
+	            	$('.navbar-collapse').attr('class', 'navbar-collapse collapse');
+	            	$('.navbar-collapse').attr('aria-expanded','false');
+	            	$('.navbar-toggle').addClass('collapsed');	
+	            	$('.navbar-toggle').attr('aria-expanded', 'false')
+	    		}
+		    } 
+		    else {
+		        // Scroll Up
+		        if (st + $(window).height() < $(document).height()) {
+		            $('#banner').removeClass('nav-up').addClass('nav-down');
 		        }
 		    }
 		    
 		    lastScrollTop = st;
 		}
-
 	}
 );
 

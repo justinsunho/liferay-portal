@@ -4,458 +4,423 @@
 /* endinject */
 
 /* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+$base: 12pt;
+$bold: 700;
+$grey: #D1D1D1;
+$orange: #FF8600; 
 
-@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,500i,600,600i,700,700i,800,800i');
+@include font-face('Merriweather', './aui/lexicon/fonts/Merriweather/Merriweather-Regular', normal, normal, $asset-pipeline: false, $file-formats: ttf);
+@include font-face('Merriweather', './aui/lexicon/fonts/Merriweather/Merriweather-Bold', $bold, normal, $asset-pipeline: false, $file-formats: ttf);
+@include font-face('Merriweather', './aui/lexicon/fonts/Merriweather/Merriweather-Italic', normal, italic, $asset-pipeline: false, $file-formats: ttf);
+@include font-face('Merriweather', './aui/lexicon/fonts/Merriweather/Merriweather-BoldItalic', $bold, italic, $asset-pipeline: false, $file-formats: ttf);
 
-$p-size: 12pt;
-$grey: #d1d1d1;
-$blue: #ff8600; //actually orange
-//$blue: #007acc;
+@include font-face('Montserrat', './aui/lexicon/fonts/Montserrat/Montserrat-Regular', normal, normal, $asset-pipeline: false, $file-formats: ttf);
+@include font-face('Montserrat', './aui/lexicon/fonts/Montserrat/Montserrat-Bold', $bold, normal, $asset-pipeline: false, $file-formats: ttf);
+@include font-face('Montserrat', './aui/lexicon/fonts/Montserrat/Montserrat-Italic', normal, italic, $asset-pipeline: false, $file-formats: ttf);
+@include font-face('Montserrat', './aui/lexicon/fonts/Montserrat/Montserrat-BoldItalic', $bold, italic, $asset-pipeline: false, $file-formats: ttf);
 
-%border-props{
-	border-style: solid;
-	border-color: $grey;
-	border-width: 1px;
-	}
 
-%padding-highlight{
-	padding-top: .125em;
-	padding-bottom: .125em;
-	padding-right: .25em;
-	padding-left: .25em;
-	}
+%border-props {
+	border: 1px solid $grey;
+}
 
-%form-focus{
+%padding-highlight {
+	padding: 2px 4px;
+}
+
+%form-focus { 
 	background-color: #FFF;
-	border-color: $blue;
-	box-shadow: 0 0 5px $blue;
+	border-color: $orange;
+	box-shadow: 0 0 5px $orange;
 	outline: none;
 }
 
 html {
+	height: 100%;
 
+#wrapper {
+	background-color: #202020;
+	font-family: Merriweather, Georgia, serif;
+	font-size: $base;
 	height: 100%;
-//////////////////////////////////////////
-/////////////WRAPPER/////////////////////
-////////////////////////////////////////
-#wrapper{
-	height: 100%;
-	font-family: merriweather, georgia;
-	background-color: rgb(32, 32, 32);
 	line-height: 1.75;
-	font-size: $p-size;
 
-	::selection{
-		color: #fff;
-		background: $blue;
+	::selection {
+		background: $orange;
+		color: #FFF;
 	}
-	::-moz-selection{
-		color: #fff;
-		backgorund: $blue;
+	::-moz-selection {
+		background: $orange;
+		color: #FFF;
 	}
 
-	&::before{
-		top: 0; //64 is the height of the control menu, try to see if there is a dynamic way of doing this.
-		height: 96px;
-		}
-
-	&::before, &::after{
+	&::before, &::after {
 		background: inherit;
-		content: "";
+		content: '';
 		display: block;
 		left: 0;
 		position: fixed;
 		width: 100%;
-		z-index: 99;
+		z-index: 9;
+	}
 
-		}
+	&::before {
+		height: 96px;
+		top: 0;
+	}
 
-	&::after{
+	&::after {
 		bottom: 0;
 		height: 24px;
-		}
+	}
 
-	#wrapper2{
-		background-color: rgb(255, 255, 255);
+	#wrapper-child {
+		background-color: #FFF;
 		padding: 20px;
-		}
+	}
 
-	a{
+	a {
+		color: $orange;
 		text-decoration: underline;
-		color: $blue;
-		&:hover{
-			text-decoration: none;
+
+		&:hover {
 			color: $grey;
-			}
-		}
-
-
-	li{
-		a{
-			color: $blue;
 			text-decoration: none;
-			}
 		}
+	}
+
+
+	li {
+
+		a {
+			color: $orange;
+			text-decoration: none;
+		}
+	}
 
 	// more efficient way of selecting this by type?
-	input[type=password], [type=text], [type=url], [type=email], [type=tel], [type=search], [type=number], [type=color], [type=number], [type=range], [type=date], [type=month], [type=week], [type=datetime], [type=datetime-local], textarea{
+	#{$all-text-inputs} {
 		@extend %border-props;
-		border-radius: 1px;
-		//font-size: $p-size - 2pt;
 		background-color: #F5F5F5;
-		//opacity: .6;
+		border-radius: 1px;
 		padding-left: .5em;
 
-		&::placeholder, &[value]{
-			font-family: montserrat;
-			font-size: $p-size - 2pt;
-			}
-
-		&:focus{
-			@extend %form-focus;
-			}
+		&::placeholder, &[value] {
+			font-family: Montserrat, Helvetica, sans serif;
+			font-size: $base - 2pt;
 		}
 
-	//input buttons
-	input[type=submit],[type=button],[type=reset], button{
+		&:focus {
+			@extend %form-focus;
+		}
+	}
+
+	//buttons. Bourbon.
+	#{$all-buttons} {
 		@extend %border-props;
+		background-color: #FFF;
 		border-radius: 3px;
-		background-color: #fff;
-		color: $blue;
-		&:hover{
-			background-color: #f5f5f5;
-			}
+		color: $orange;
+		
+		&:hover {
+			background-color: #F5F5F5;
 		}
+	}
 
-	select{
-		background-color: #f5f5f5;
-		&:focus{
+	select {
+		background-color: #F5F5F5;
+
+		&:focus {
 			@extend %form-focus;
 		}
 	}
-
-
-
-		// a{
-		// 	&:hover{
-		// 		color: $blue;
-		// 	}
-
-		// }
 }
 
-@media (max-width: 767px){
-	#wrapper{
-		background-color: #fff;
+@media (max-width: $screen-xs-max) {
+	#wrapper {
+		background-color: #FFF;
 	}
 }
 
-//////////////////////////////////////////
-/////////////BANNER//////////////////////
-////////////////////////////////////////
-	.nav-up {
-    	top: -100px;
-	}
+/* -----------BANNER------------------ */
+.nav-up {
+	top: -100px;
+}
 
-	.nav-down{
-		top: 85px;
-	}
+.nav-down {
+	top: 85px;
+}
 
-#banner{
-	background-color: #fff;
-	z-index: 10;
-	position: fixed;
-	font-family: montserrat;
+#banner {
+	background-color: #FFF;
+	font-family: Montserrat, Helvetica, sans serif;
 	line-height: 1.5;
-  	width: 92.5%;
-  	padding: 20px;
+	padding: 20px;
+  	padding-bottom: 2px;
+  	position: fixed;
+	  	transition: top 0.2s ease-in-out;
+		width: 92.5%;
+	z-index: 6;
 
-  	  	transition: top 0.2s ease-in-out;
 
-	#rowwrapper{
-		width: 100%;
-	}
-
-	#heading{
+	.navbar-header {
 		display: inline;
 
-		#rowwrapper{
-			background: url('https://d2r55xnwy6nx47.cloudfront.net/uploads/2018/02/QC_QuantumSupremacy_2880x1620-2880x1620.jpg');
-		}
-
-		span{
-			font-weight: 700;
-			font-size: $p-size + 32pt;
-			color: $blue;
-
+		span {
+			color: $orange;
+			font-size: $base + 32pt;
+			font-weight: $bold;
 		}
 		
-		p{
+		p {
 			color: #000;
-			font-weight: normal;
+			font-size: $base;
 			font-style: italic;
-			font-size: $p-size;
+			font-weight: normal;
 		}
 
-		button{
-			font-weight: 700;
+		.navbar-toggle {
+			font-weight: $bold;
+
+			span {
+				font-size: $base;
+			}
+		}
+
+		.navbar-toggle[aria-expanded=true]{
+			background-color: $orange;
+
 			span{
-				font-size: $p-size;
+				color: #FFF;
 			}
 		}
 	}
 
 	//dropdown navigation menu
-
-	.navbar-collapse.in{
+	.navbar-collapse.in {
 		overflow: visible;
-		}
+	}
 
-	nav{
+	nav {
 
-		ul{
+		ul {
+			color: #000;
 			list-style: none outside none;
+			margin-bottom: 0;
 			margin-top: 5px;
-			margin-bottom: 0px;
 			padding: 0;
-			color: rgb(0,0,0);
 			
-
-			li{
-				font-weight: 700;
+			li {
+				font-weight: $bold;
 				padding: 10px;
-				// add bootstrap for the down symbol.
-				a{
+				
+				a {
 					color: #000;
-					font-size: $p-size;
+					font-size: $base;
 					text-decoration: none;
 
-					i{
-						font-size: $p-size - 4pt;
+					i {
+						font-size: $base - 4pt;
 					}
 
-					&:hover{
+					&:hover {
 						text-decoration: none;
-						color: $blue;
-						}
-
-					&[aria-expanded="true"]{
-						.icon-chevron-left{
-							display: none;
-							}
-						}	
-					&[aria-expanded="false"]{
-						.icon-chevron-down{
-							display: none;
-							}
-						}	
-									
+						color: $orange;
 					}
+
+					&[aria-expanded='true'] .icon-chevron-left {
+						display: none;
+					}	
 					
-				ul{
+					&[aria-expanded='false'] .icon-chevron-down {
+						display: none;
+					}	
+				}
+					
+				ul {
 					overflow: visible;
 					text-align: center; 
 
-					li{
+					li {
 						background-color: #FFF;
 
-						a{
+						a {
 							color: inherit;
-							text-decoration: none;
 							font-weight: normal;
 							text-align: left;
+							text-decoration: none;
 
-							&:hover{
-								color: $blue;
-								}
-
+							&:hover {
+								color: $orange;
 							}
 						}
 					}
 				}
 			}
 		}
-	@media (max-width: 767px){
-		#parent-a{
+	}
+
+	@media (max-width: $screen-xs-max) {
+		#parent-a {
 			display: inline-block;
 			width: 80%;
 		}
 
-		#heading span{
-			font-size: $p-size + 12pt;
+		.navbar-header span {
+			font-size: $base + 12pt;
 		}
 
-
-		nav ul li a i{
-				font-size: $p-size;
-			}
-
+		nav ul li a i {
+			font-size: $base;
 		}
+	}
 }
 
-
-
-//////////////////////////////////////////
-/////////////CONTENT/////////////////////
-////////////////////////////////////////
-#content{
-	z-index: 1;
+/* -----------CONTENT------------------ */
+#content {
 	display: block;
-	padding-top: 15%;
+	padding-top: 150px;
+	width: 95%;
 
-	h1, h2, h3, h4, h5, h6{
-		font-family: merriweather;
-		font-weight: 700;
-		}
+	h1, h2, h3, h4, h5, h6 {
+		font-family: Merriweather, Georgia, serif;
+		font-weight: $bold;
+	}
 
-			//blockquote
-	blockquote{
-		font-style: italic;
-		color: gray;
+	blockquote {
 		border-left: 5px solid #000000;
-		}
+		color: gray;
+		font-style: italic;
+	}
 
-	//table
-	table{
+	table {
 		font-size: 75%;
 		
-
-		caption{
+		caption {
 			font-style: italic;
-			}
+		}
 
-		thead, tbody, tfoot{
-			vertical-align: middle;
+		tbody, tfoot, thead {
 			border-color: inherit;
-			}
+			vertical-align: middle;
+		}
 
-		th, td{
+		td, th {
 			@extend %border-props;
 			padding: 7px;
 			text-align: left;
-			}
 		}
+	}
 
-	ul{
+	ul {
 		list-style: disc;
-		}
+	}
 
-	address{
+	address {
 		font-style: italic;
-		}
+	}
 
-	cite{
+	cite {
 		font-style: normal;
 
-		&::before{
+		&::before {
 			content: '\2014\00a0';
-			}
-		}	
+		}
+	}	
 
-	//should i even change?
-	code{
+	code {
 		@extend %padding-highlight;
 		background-color: $grey;
-		font-family: inconsolata, monospace;
+		font-family: Inconsolata, Monospace;
 		word-wrap: break-word;
-		}
+	}
 
-	ins{
+	ins {
 		@extend %padding-highlight;
-		background: $blue;
-		color: #fff;
+		background: $orange;
+		color: #FFF;
 		text-decoration: none;
-		}
+	}
 
-	// should i even change?
-	kbd{
+	kbd {
 		color: $grey;
-		}
+	}
 
-	pre{
+	pre {
 		@extend %border-props;
+		background-color: #FFF;
 		line-height: 1.3125em;
 		max-width: 100%;
 		overflow: auto;
 		padding: 1.75em;
 		white-space: pre-wrap;
 		word-wrap:break-word;
-		background-color: #fff;
+	}
 
-		//border-radius 0px;
-		}
-
-	var{
-		font-family: inconsolata, monospace;
+	var {
+		font-family: Inconsolata, Monospace;
 		font-style: italic;
-		}
+	}
 
-
-		// for links with thumbnails. NOT pure img.
-	figure{
-
-		position: relative;
+	figure {
+		margin: 0;
 		overflow: hidden;
-		margin: 0px;
-		//border: 1px solid #000;
+		position: relative;
 		width: 200px;
 
-		img{			
+		img {			
+			transition: all 0.3s;
 			width: 100%;
-			-moz-transition: all 0.3s;
-  			-webkit-transition: all 0.3s;
-  			transition: all 0.3s;
-  			}		
+		}		
 
-		figcaption{
+		figcaption {
+			background-color: #fff;
 			display: inline-block;
 			height: 30px;
-			background-color: #fff;
 		}
 
-		&:hover{
-			img{
-				-moz-transform: scale(1.1);
-				-webkit-transform: scale(1.1);
-				transform: scale(1.1);
-				border-color: $blue;
-			figcaption{
-				color: $blue;
-				font-style: italic;
+		&:hover {
+			img {
+				@include prefixer(transform, scale(1.1), ('moz', 'webkit'));
+				border-color: $orange;
 
+				figcaption {
+					color: $orange;
+					font-style: italic;
 				}
 			}
 		}
 	}
 }
 
+@media(max-width: $screen-sm-max){
+	#content{
+		padding-top: 100px;
+	}
+}
+@media(max-width: $screen-xs-max){
+	#content{
+		padding-top: 70px;
+	}
+}
 
-
-//////////////////////////////////////////
-/////////////FOOTER//////////////////////
-////////////////////////////////////////
-#footer{
-	font-family: montserrat;
-	ul{
-		text-align: right;
+/* -----------FOOTER------------------ */
+#footer {
+	font-family: Montserrat, Helvetica, sans serif;
+	
+	ul {
 		list-style: none outside none;
+		text-align: right;
 
-		li{
-			margin: 12px;
+		li {
 			display: inline;
+			margin: 12px;
 
-			div{
+			div {
 				display: inline;
-
 			}
 		}
 	}
-
 }
-
-//////////////////////////////////////////
-/////////////MEDIA Q//////////////////////
-////////////////////////////////////////
 
 }
