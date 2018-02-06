@@ -70,7 +70,6 @@
           </p>
 
           <div class="social-media-wrapper col-xs-6">
-            
             <ul>
                 <li>
                     <div id="facebook">
@@ -113,7 +112,7 @@
       </footer>
   </div>
 </div>
- 
+
 <@liferay_util["include"] page=body_bottom_include />
 <@liferay_util["include"] page=bottom_include />
 
