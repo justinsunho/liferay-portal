@@ -26,12 +26,16 @@
         <div class="row">
           <div class="navbar-header" id="heading">
             <#if show_site_name>
-                <span class="site-name" key="go-to-x"  title="<@liferay.language_format arguments="${site_name}" />"> ${site_name} </span>
-                <p class="hidden-sm hidden-xs" title="<@liferay.language_format arguments="${sub_heading}">"${sub_heading}"</p>
+              <span class="site-name" title="<@liferay.language_format arguments="${site_name}" key="go-to-x" />">
+                ${site_name}
+              </span>
+              <p class="hidden-sm hidden-xs" title="<@liferay.language_format arguments="${sub_heading}" key="go-to-x" />">
+                ${sub_heading}
+              </p>
             </#if>
 
             <button  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="align-bottom collapsed navbar-toggle"  data-target="#navbarSupportedContent" data-toggle="collapse" id="navbarButton" type="button">
-                <span id="btnChild">MENU</span>
+                <span id="btnChild"><i class="icon-th-list"></i></span>
             </button>
           </div>
 

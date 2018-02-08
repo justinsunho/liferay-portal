@@ -1,4 +1,4 @@
-<div class="navbar-collapse collapse" id="navbarSupportedContent">
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
 <nav class="${nav_css_class}" id="navigation" role="navigation">
 
 	<ul aria-label="<@liferay.language key="site-pages" />" role="menubar" class="navbar-nav navbar-right">
@@ -21,7 +21,7 @@
 			<#if !nav_item.hasChildren()>
 				<li ${nav_item_attr_selected} class="${nav_item_css_class}" id="layout_${nav_item.getLayoutId()}" role="presentation">
 					<a aria-labelledby="layout_${nav_item.getLayoutId()}" class="navAnchor" ${nav_item_attr_has_popup} href="${nav_item.getURL()}" ${nav_item.getTarget()} role="menuitem">
-						<span class="navItemSpan"><@liferay_theme["layout-icon"] layout=nav_item_layout /> 
+						<span class="navItemSpan"><@liferay_theme["layout-icon"] layout=nav_item_layout />
 							${nav_item.getName()}
 						</span>
 					</a>
@@ -29,11 +29,11 @@
 			<#elseif nav_item.hasChildren()>
 				<li class="dropdown" role="menu">
 					<a aria-labelledby="layout_${nav_item.getLayoutId()}" class="navAnchor" ${nav_item_attr_has_popup} href="${nav_item.getURL()}" ${nav_item.getTarget()} role="menuitem">
-						<span class="navItemSpan"><@liferay_theme["layout-icon"] layout=nav_item_layout /> 
+						<span class="navItemSpan"><@liferay_theme["layout-icon"] layout=nav_item_layout />
 							${nav_item.getName()}
 						</span>
 					</a>
-					<a aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button">
+					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button">
 						<i class="icon-chevron-left"></i>
 						<i class="icon-chevron-down"></i>
 					</a>

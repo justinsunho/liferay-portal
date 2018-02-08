@@ -1,9 +1,7 @@
 AUI().ready(
 
 	/* This function gets loaded when all the HTML, not including the portlets, is loaded. */
-	function() {
-		hideHeadingScroll();
-	}
+	hideHeadingScroll()
 );
 
 Liferay.Portlet.ready(
@@ -26,7 +24,7 @@ Liferay.on(
 	}
 );
 
-hideHeadingScroll(){
+function hideHeadingScroll() {
 	var delta = 10;
 	var lastScrollTop = 0;
 	var navbarHeight = $('#banner').outerHeight();
@@ -38,14 +36,14 @@ hideHeadingScroll(){
 		}
 	);
 
-	setInterval( 
+	setInterval(
 		function() {
 				if (scrolling) {
 					moveBar();
-					
+
 					scrolling = false;
 				}
-		}, 
+		},
 		250
 	);
 
@@ -58,10 +56,10 @@ hideHeadingScroll(){
 
 				$('#banner').removeClass('nav-down').addClass('nav-up');
 
-				if ($('#navbarSupportedContent').hasClass('navbar-collapse collapse in') {
+				if ($('#navbarSupportedContent').hasClass('navbar-collapse collapse in')) {
 					$('.navbar-collapse').removeClass('in');
 					$('.navbar-collapse').attr('aria-expanded', 'false');
-					
+
 					$('.navbar-toggle').addClass('collapsed');
 					$('.navbar-toggle').attr('aria-expanded', 'false');
 				}
