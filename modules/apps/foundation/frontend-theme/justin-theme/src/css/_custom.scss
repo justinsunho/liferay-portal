@@ -1,13 +1,8 @@
-/* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
-
-/* inject:imports */
-
-/* endinject */
-
-/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
 $base: 12pt;
 $bold: 700;
+$borderBlack: #202020;
 $grey: #D1D1D1;
+$lightGrey: #F5F5F5;
 $orange: #FF8600;
 
 @include font-face('Merriweather', './aui/lexicon/fonts/Merriweather/Merriweather-Regular', normal, normal, $asset-pipeline: false, $file-formats: ttf);
@@ -39,11 +34,15 @@ html {
 	height: 100%;
 
 	#wrapper {
-		background-color: #202020;
+		background-color: $borderBlack;
 		font-family: Merriweather, Georgia, serif;
 		font-size: $base;
 		height: 100%;
 		line-height: 1.75;
+	
+		@media (max-width: $screen-xs-max) {
+			background-color: #FFF;
+		}
 
 		::selection {
 			background: $orange;
@@ -55,7 +54,7 @@ html {
 			color: #FFF;
 		}
 
-		&:before, &:after {
+		&:after, &:before {
 			background: inherit;
 			content: '';
 			display: block;
@@ -75,7 +74,7 @@ html {
 			height: 24px;
 		}
 
-		#wrapper-child {
+		#subWrapper {
 			background-color: #FFF;
 			padding: 20px;
 		}
@@ -96,8 +95,8 @@ html {
 		}
 
 		#{$all-text-inputs} {
+			background-color: $lightGrey;
 			@extend %border-props;
-			background-color: #F5F5F5;
 			border-radius: 1px;
 			padding-left: 8px;
 
@@ -112,18 +111,18 @@ html {
 		}
 
 		#{$all-buttons} {
-			@extend %border-props;
 			background-color: #FFF;
+			@extend %border-props;
 			border-radius: 3px;
 			color: $orange;
 
 			&:hover {
-				background-color: #F5F5F5;
+				background-color: $lightGrey;
 			}
 		}
 
 		select {
-			background-color: #F5F5F5;
+			background-color: $lightGrey;
 
 			&:focus {
 				@extend %form-focus;
@@ -131,13 +130,7 @@ html {
 		}
 	}
 
-	@media (max-width: $screen-xs-max) {
-		#wrapper {
-			background-color: #FFF;
-		}
-	}
-
-	/* -----------BANNER------------------ */
+	/* ---------- Banner ---------- */
 
 	.nav-up {
 		top: -100px;
@@ -221,11 +214,7 @@ html {
 							text-decoration: none;
 						}
 
-						&[aria-expanded='true'] .icon-chevron-left {
-							display: none;
-						}
-
-						&[aria-expanded='false'] .icon-chevron-down {
+						&[aria-expanded='false'] .icon-chevron-down, &[aria-expanded='true'] .icon-chevron-left {
 							display: none;
 						}
 					}
@@ -254,7 +243,7 @@ html {
 		}
 
 		@media (max-width: $screen-xs-max) {
-			#parent-a {
+			.navAnchor {
 				display: inline-block;
 				width: 80%;
 			}
@@ -269,12 +258,20 @@ html {
 		}
 	}
 
-	/* -----------CONTENT------------------ */
+	/* ---------- Content ---------- */
 
 	#content {
 		display: block;
 		padding-top: 150px;
 		width: 95%;
+
+		@media (max-width: $screen-sm-max) {
+			padding-top: 100px;
+		}
+
+		@media (max-width: $screen-xs-max) {
+			padding-top: 70px;
+		}
 
 		h1, h2, h3, h4, h5, h6 {
 			font-family: Merriweather, Georgia, serif;
@@ -323,16 +320,16 @@ html {
 		}
 
 		code {
-			@extend %padding-highlight;
 			background-color: $grey;
 			font-family: Inconsolata, monospace;
+			@extend %padding-highlight;
 			word-wrap: break-word;
 		}
 
 		ins {
-			@extend %padding-highlight;
 			background: $orange;
 			color: #FFF;
+			@extend %padding-highlight;
 			text-decoration: none;
 		}
 
@@ -341,8 +338,8 @@ html {
 		}
 
 		pre {
-			@extend %border-props;
 			background-color: #FFF;
+			@extend %border-props;
 			line-height: 1.313em;
 			max-width: 100%;
 			overflow: auto;
@@ -375,8 +372,8 @@ html {
 
 			&:hover {
 				img {
-					@include prefixer(transform, scale(1.1), ('moz', 'webkit'));
 					border-color: $orange;
+					@include prefixer(transform, scale(1.1), ('moz', 'webkit'));
 
 					figcaption {
 						color: $orange;
@@ -387,19 +384,7 @@ html {
 		}
 	}
 
-	@media (max-width: $screen-sm-max) {
-		#content {
-			padding-top: 100px;
-		}
-	}
-
-	@media (max-width: $screen-xs-max) {
-		#content {
-			padding-top: 70px;
-		}
-	}
-
-	/* -----------FOOTER------------------ */
+	/* ---------- Footer ---------- *//
 
 	#footer {
 		font-family: Montserrat, Helvetica, sans serif;

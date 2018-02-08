@@ -25,11 +25,12 @@
 			<portlet-decorator-css-class>portlet-decorate</portlet-decorator-css-class>
 		</portlet-decorator>
 		<settings>
+			<setting configurable="true" key="sub-heading" type="textarea" />
 			<setting configurable="true" key="facebook-link" type="text" />
-			<setting configurable="true" key="twitter-link" type="text" />
-			<setting configurable="true" key="linkedin-link" type="text" />
-			<setting configurable="true" key="youtube-link" type="text" />
 			<setting configurable="true" key="google-plus-link" type="text" />s
+			<setting configurable="true" key="linkedin-link" type="text" />
+			<setting configurable="true" key="twitter-link" type="text" />
+			<setting configurable="true" key="youtube-link" type="text" />
 		</settings>
 	</theme>
 </look-and-feel>

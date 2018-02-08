@@ -21,17 +21,16 @@
 <@liferay.control_menu />
 
 <div class="container-fluid" id="wrapper">
-  <div id="wrapper-child">
-    <header id="banner" role="banner" class="nav-down">
+  <div id="subWrapper">
+    <header class="nav-down" id="banner" role="banner">
         <div class="row">
-          <div id="heading" class="navbar-header">
+          <div class="navbar-header" id="heading">
             <#if show_site_name>
-                <span class="site-name" title="<@liferay.language_format arguments="${site_name}" key="go-to-x" />">
-                  ${site_name} </span>
-                 <p class="hidden-sm hidden-xs">Test Page for Liferay Theme by Justin Kim</p>
+                <span class="site-name" key="go-to-x"  title="<@liferay.language_format arguments="${site_name}" />"> ${site_name} </span>
+                <p class="hidden-sm hidden-xs" title="<@liferay.language_format arguments="${sub_heading}">"${sub_heading}"</p>
             </#if>
 
-            <button class="navbar-toggle collapsed align-bottom" id="navbarButton" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="align-bottom collapsed navbar-toggle"  data-target="#navbarSupportedContent" data-toggle="collapse" id="navbarButton" type="button">
                 <span id="btnChild">MENU</span>
             </button>
           </div>
@@ -65,50 +64,14 @@
 
       <footer id="footer" role="contentinfo">
         <div class="row">
-          <p class="powered-by col-xs-6">
+          <p class="col-xs-6 powered-by">
             <@liferay.language key="powered-by" /> <a href="http://www.liferay.com" rel="external">Liferay</a>
           </p>
 
-          <div class="social-media-wrapper col-xs-6">
-            <ul>
-                <li>
-                    <div id="facebook">
-                      <a class="icon-facebook" href="${facebook_link}" target="_blank">
-                        <span class="hide">Facebook</span>
-                      </a>
-                    </div>
-                </li>
-                <li>
-                    <div id="twitter">
-                      <a class="icon-twitter" href="${twitter_link}" target="_blank">
-                        <span class="hide">Twitter</span>
-                      </a>
-                    </div>
-                </li>
-                <li>
-                    <div id="linked-in">
-                      <a class="icon-linkedin" href="${linkedin_link}" target="_blank">
-                        <span class="hide">LinkedIn</span>
-                      </a>
-                    </div>
-                </li>
-                <li>
-                    <div id="youtube">
-                      <a class="icon-youtube" href="${youtube_link}" target="_blank">
-                        <span class="hide">YouTube</span>
-                      </a>
-                    </div>
-                </li>
-                <li>
-                    <div id="google-plus">
-                      <a class="icon-google-plus" href="${google_plus_link}" target="_blank">
-                        <span class="hide">Google</span>
-                      </a>
-                    </div>
-                </li>
-            </ul>
+          <div class="col-xs-6 social-media-wrapper">
+            <#include "${full_templates_path}/social.ftl" />
           </div>
-      </div>
+        </div>
       </footer>
   </div>
 </div>
