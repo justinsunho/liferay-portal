@@ -35,7 +35,9 @@
             </#if>
 
             <button  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="align-bottom collapsed navbar-toggle"  data-target="#navbarSupportedContent" data-toggle="collapse" id="navbarButton" type="button">
-                <span id="btnChild"><i class="icon-th-list"></i></span>
+                <span id="btnChild">
+                  <i class="icon-th-list"></i>
+                </span>
             </button>
           </div>
 
