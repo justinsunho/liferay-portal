@@ -54,6 +54,7 @@ function hideHeadingScroll() {
 	);
 
 	function moveBar() {
+
 		var scrollTop = $(this).scrollTop();
 
 		var controlMenuHeight = $('.control-menu').height();
@@ -67,7 +68,6 @@ function hideHeadingScroll() {
 				banner.removeClass('nav-down').addClass('nav-up');
 
 				if ($('.navbarSupportedContent').hasClass('navbar-collapse collapse in')) {
-					console.log('fjfjf');
 					navbarCollapse.removeClass('in');
 
 					navbarCollapse.attr('aria-expanded', 'false');
@@ -76,7 +76,6 @@ function hideHeadingScroll() {
 					
 					navbarToggle.attr('aria-expanded', 'false');
 				}
-
 			}
 			else if (scrollTop + $(window).height() < $(document).height()) {
 				banner.removeClass('nav-up').addClass('nav-down');
