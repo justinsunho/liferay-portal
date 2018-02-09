@@ -19,6 +19,7 @@
 		</portlet-decorator>
 		<settings>
 			<setting configurable="true" key="sub-heading" type="textarea" />
+			
 			<setting configurable="true" key="facebook-link" type="text" />
 			<setting configurable="true" key="google-plus-link" type="text" />
 			<setting configurable="true" key="linkedin-link" type="text" />
