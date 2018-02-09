@@ -18,8 +18,15 @@
 		<layout-templates>
 			<custom>
 				<layout-template id="home_page" name="home page layout">
-					<template-path>/layouttpl/custom/home_page.tpl</template-path>
+					<template-path>..\layouttpl\custom\home_page.tpl</template-path>
 					<thumbnail-path>/layouttpl/custom/home_page.png</thumbnail-path>
+				</layout-template>
+				<layout-template id="home_page_2" name="home page 2 layout">
+					<template-path>
+C:\Users\liferay\Training\liferay-portal-2\liferay-portal\modules\apps\foundation\frontend-theme\justin-theme\src\layouttpl					</template-path>
+					<thumbnail-path>
+						/layouttpl/custom/home-page-2-layouttpl/home_page_2.png
+					</thumbnail-path>
 				</layout-template>
 			</custom>
 		</layout-templates>

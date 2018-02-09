@@ -25,13 +25,12 @@ Liferay.on(
 );
 
 function hideHeadingScroll() {
-
 	var delta = 40;
 	var banner = $('#banner');
 	var lastScrollTop = 0;
 	var navbarCollapse = $('.navbar-collapse');
 	var navbarHeight = banner.outerHeight();
-	var navbarSupportedContent = $('.navbarSupportedContent');
+	var navbarSupportedContent = $('#navbarSupportedContent');
 	var navbarToggle = $('.navbar-toggle');
 	var scrolling;
 
@@ -54,7 +53,6 @@ function hideHeadingScroll() {
 	);
 
 	function moveBar() {
-
 		var scrollTop = $(this).scrollTop();
 
 		var controlMenuHeight = $('.control-menu').height();
@@ -67,7 +65,7 @@ function hideHeadingScroll() {
 			if (scrollTop > lastScrollTop && scrollTop > navbarHeight) {
 				banner.removeClass('nav-down').addClass('nav-up');
 
-				if ($('.navbarSupportedContent').hasClass('navbar-collapse collapse in')) {
+				if (navbarSupportedContent.hasClass('navbar-collapse collapse in')) {
 					navbarCollapse.removeClass('in');
 
 					navbarCollapse.attr('aria-expanded', 'false');
