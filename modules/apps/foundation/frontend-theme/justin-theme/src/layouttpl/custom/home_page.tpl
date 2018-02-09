@@ -5,7 +5,7 @@
                 </div>
         </div>
         <div class="portlet-layout row">
-                <div class="col-md-4 portlet-column portlet-column-first" id="column-2">
+                <div class="col-md-8 portlet-column portlet-column-first" id="column-2">
                         $processor.processColumn("column-2", "portlet-column-content portlet-column-content-first")
                         <div class="portlet-layout row">
                                 <div class="col-md-6 portlet-column portlet-column-first" id="column-3">
@@ -24,7 +24,7 @@
                                 </div>
                         </div>
                 </div>
-                <div class="col-md-8 portlet-column portlet-column-last" id="column-7">
+                <div class="col-md-4 portlet-column portlet-column-last" id="column-7">
                         $processor.processColumn("column-7", "portlet-column-content portlet-column-content-last")
                 </div>
         </div>

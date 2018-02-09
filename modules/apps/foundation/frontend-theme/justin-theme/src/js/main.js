@@ -27,12 +27,17 @@ Liferay.on(
 function hideHeadingScroll() {
 
 	var delta = 40;
+	var banner = $('#banner');
 	var lastScrollTop = 0;
-	var navbarHeight = $('#banner').outerHeight();
+	var navbarCollapse = $('.navbar-collapse');
+	var navbarHeight = banner.outerHeight();
+	var navbarSupportedContent = $('.navbarSupportedContent');
+	var navbarToggle = $('.navbar-toggle');
 	var scrolling;
 
 	$(window).scroll(
 		function(event) {
+
 			scrolling = true;
 		}
 	);
@@ -41,6 +46,7 @@ function hideHeadingScroll() {
 		function() {
 				if (scrolling) {
 					moveBar();
+
 					scrolling = false;
 				}
 		},
@@ -51,28 +57,29 @@ function hideHeadingScroll() {
 		var scrollTop = $(this).scrollTop();
 
 		var controlMenuHeight = $('.control-menu').height();
+
 		$('.nav-down').css({top: controlMenuHeight});
+
 		$('.nav-up').css({top: -200});
 
-
 		if (Math.abs(lastScrollTop - scrollTop) > delta) {
-
 			if (scrollTop > lastScrollTop && scrollTop > navbarHeight) {
-				$('#banner').removeClass('nav-down').addClass('nav-up');
+				banner.removeClass('nav-down').addClass('nav-up');
 
-				if ($('#navbarSupportedContent').hasClass('navbar-collapse collapse in')) {
-					$('.navbar-collapse').removeClass('in');
+				if ($('.navbarSupportedContent').hasClass('navbar-collapse collapse in')) {
+					console.log('fjfjf');
+					navbarCollapse.removeClass('in');
 
-					$('.navbar-collapse').attr('aria-expanded', 'false');
+					navbarCollapse.attr('aria-expanded', 'false');
 
-					$('.navbar-toggle').addClass('collapsed');
+					navbarToggle.addClass('collapsed');
 					
-					$('.navbar-toggle').attr('aria-expanded', 'false');
+					navbarToggle.attr('aria-expanded', 'false');
 				}
 
 			}
 			else if (scrollTop + $(window).height() < $(document).height()) {
-				$('#banner').removeClass('nav-up').addClass('nav-down');
+				banner.removeClass('nav-up').addClass('nav-down');
 			}
 
 			lastScrollTop = scrollTop;

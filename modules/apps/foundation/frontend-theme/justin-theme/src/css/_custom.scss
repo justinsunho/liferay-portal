@@ -52,31 +52,6 @@ html {
 			color: #FFF;
 		}
 
-		// &:after, &:before {
-		// 	background: inherit;
-		// 	content: '';
-		// 	display: block;
-		// 	left: 0;
-		// 	position: fixed;
-		// 	width: 100%;
-		// 	z-index: 9;
-		// }
-
-		// &:before {
-		// 	height: 96px;
-		// 	top: 0;
-		// }
-
-		// &:after {
-		// 	bottom: 0;
-		// 	height: 24px;
-		// }
-
-		// #subWrapper {
-		// 	background-color: #FFF;
-		// 	padding: 20px;
-		// }
-
 		a {
 			color: $orange;
 			text-decoration: underline;
@@ -248,7 +223,7 @@ html {
 
 				position: fixed;
 
-				.navbar-header span{
+				.navbar-header span {
 					font-size: $base + 16pt;
 				}
 			}
@@ -257,10 +232,10 @@ html {
 
 				width: 95%;
 
-				.row{
+				.row {
 					padding-bottom: 20px;
 				}
-				.navAnchor {
+				.nav-anchor {
 					display: inline-block;
 					width: 80%;
 				}

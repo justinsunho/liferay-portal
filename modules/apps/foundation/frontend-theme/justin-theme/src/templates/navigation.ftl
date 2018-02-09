@@ -20,7 +20,7 @@
 
 			<#if !nav_item.hasChildren()>
 				<li ${nav_item_attr_selected} class="${nav_item_css_class}" id="layout_${nav_item.getLayoutId()}" role="presentation">
-					<a aria-labelledby="layout_${nav_item.getLayoutId()}" class="navAnchor" ${nav_item_attr_has_popup} href="${nav_item.getURL()}" ${nav_item.getTarget()} role="menuitem">
+					<a aria-labelledby="layout_${nav_item.getLayoutId()}" class="nav-anchor" ${nav_item_attr_has_popup} href="${nav_item.getURL()}" ${nav_item.getTarget()} role="menuitem">
 						<span class="navItemSpan"><@liferay_theme["layout-icon"] layout=nav_item_layout />
 							${nav_item.getName()}
 						</span>
@@ -28,7 +28,7 @@
 				</li>
 			<#elseif nav_item.hasChildren()>
 				<li class="dropdown" role="menu">
-					<a aria-labelledby="layout_${nav_item.getLayoutId()}" class="navAnchor" ${nav_item_attr_has_popup} href="${nav_item.getURL()}" ${nav_item.getTarget()} role="menuitem">
+					<a aria-labelledby="layout_${nav_item.getLayoutId()}" class="nav-anchor" ${nav_item_attr_has_popup} href="${nav_item.getURL()}" ${nav_item.getTarget()} role="menuitem">
 						<span class="navItemSpan"><@liferay_theme["layout-icon"] layout=nav_item_layout />
 							${nav_item.getName()}
 						</span>
@@ -62,6 +62,7 @@
 				</li>
 			</#if>
 		</#list>
+		
 	</ul>
 </nav>
 </div>
