@@ -33,13 +33,20 @@ $orange: #FF8600;
 html {
 	height: 100%;
 
+	.has-control-menu #wrapper .nav-down {
+		top: 64px;
+		@media(max-width: $screen-xs-max){
+			top: 48px;
+		}
+	}
+
 	#wrapper {
-		//background-color: $borderBlack;
 		background-color: #FFF;
 		font-family: Merriweather, Georgia, serif;
 		font-size: $base;
 		height: 100%;
 		line-height: 1.75;
+		padding: 0px;
 		position: relative;
 
 		::selection {
@@ -103,7 +110,7 @@ html {
 		}
 
 		.nav-up {
-			top: -100px;
+			top: -400px;
 		}
 
 		.nav-down {
@@ -121,7 +128,7 @@ html {
 			box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.2);
 			font-family: Montserrat, Helvetica, sans serif;
 			line-height: 1.5;
-			padding: 40px;
+			padding: 7%;
 			padding-top: 20px;
 			padding-bottom: 2px;
 			position: sticky;
@@ -230,8 +237,6 @@ html {
 
 			@media (max-width: $screen-xs-max) {
 
-				width: 95%;
-
 				.row {
 					padding-bottom: 20px;
 				}
@@ -255,8 +260,9 @@ html {
 		#content {
 			display: block;
 			margin: auto;
-			//padding-top: 40px;
-			width: 95%;
+			padding: 0% 5%;
+			padding-top: 2.5%;
+			width: 100%;
 
 			h1, h2, h3, h4, h5, h6 {
 				font-family: Merriweather, Georgia, serif;
@@ -369,11 +375,11 @@ html {
 			}
 
 			@media (max-width: $screen-sm-max) {
-				//padding-top: 110px;
+				padding-top: 130px;
 			}
 
 			@media (max-width: $screen-xs-max) {
-			//	padding-top: 90px;
+				padding-top: 140px;
 			}
 		}
 
