@@ -57,10 +57,6 @@ function hideHeadingScroll() {
 
 		var controlMenuHeight = $('.control-menu').height();
 
-		$('.nav-down').css({top: controlMenuHeight});
-
-		$('.nav-up').css({top: -200});
-
 		if (Math.abs(lastScrollTop - scrollTop) > delta) {
 			if (scrollTop > lastScrollTop && scrollTop > navbarHeight) {
 				banner.removeClass('nav-down').addClass('nav-up');

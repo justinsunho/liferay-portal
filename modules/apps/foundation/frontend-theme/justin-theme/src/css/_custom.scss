@@ -255,7 +255,7 @@ html {
 		#content {
 			display: block;
 			margin: auto;
-			padding-top: 40px;
+			//padding-top: 40px;
 			width: 95%;
 
 			h1, h2, h3, h4, h5, h6 {
@@ -369,11 +369,11 @@ html {
 			}
 
 			@media (max-width: $screen-sm-max) {
-				padding-top: 110px;
+				//padding-top: 110px;
 			}
 
 			@media (max-width: $screen-xs-max) {
-				padding-top: 90px;
+			//	padding-top: 90px;
 			}
 		}
 
