@@ -7,14 +7,6 @@
 	</compatibility>
 	<theme id="justin" name="justin">
 		<template-extension>ftl</template-extension>
-		<layout-templates>
-			<custom>
-				<layout-template id="home-page" name="home-page">
-					<template-path>\layouttpl\custom\home-page-layouttpl/home_page.tpl</template-path>
-					<thumbnail-path>\layouttpl\custom\home-page-layouttpl/home_page.png</thumbnail-path>
-				</layout-template>
-			</custom>
-		</layout-templates>
 		<settings>
 			<setting configurable="true" key="sub-heading" type="textarea" />	
 			<setting configurable="true" key="facebook-link" type="text" />
@@ -23,6 +15,14 @@
 			<setting configurable="true" key="twitter-link" type="text" />
 			<setting configurable="true" key="youtube-link" type="text" />
 		</settings>
+		<layout-templates>
+			<custom>
+				<layout-template id="home-page" name="home-page">
+					<template-path>\layouttpl\custom\home-page-layouttpl/home_page.tpl</template-path>
+					<thumbnail-path>\layouttpl\custom\home-page-layouttpl/home_page.png</thumbnail-path>
+				</layout-template>
+			</custom>
+		</layout-templates>
 		<portlet-decorator id="barebone" name="Barebone">
 			<portlet-decorator-css-class>portlet-barebone</portlet-decorator-css-class>
 		</portlet-decorator>
