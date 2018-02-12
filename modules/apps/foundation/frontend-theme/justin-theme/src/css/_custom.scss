@@ -128,9 +128,7 @@ html {
 			box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.2);
 			font-family: Montserrat, Helvetica, sans serif;
 			line-height: 1.5;
-			padding: 7%;
-			padding-top: 20px;
-			padding-bottom: 2px;
+			padding: 20px 7% 2px;
 			position: sticky;
 			transition: top 0.2s ease-in-out;
 			width: 100%;
@@ -262,7 +260,7 @@ html {
 			margin: auto;
 			padding: 0% 5%;
 			padding-top: 2.5%;
-			width: 100%;
+			width: 95%;
 
 			h1, h2, h3, h4, h5, h6 {
 				font-family: Merriweather, Georgia, serif;
@@ -292,10 +290,6 @@ html {
 					padding: 7px;
 					text-align: left;
 				}
-			}
-
-			ul {
-				list-style: disc;
 			}
 
 			address {
@@ -387,6 +381,7 @@ html {
 
 		#footer {
 			font-family: Montserrat, Helvetica, sans serif;
+			padding: 10px 5% 20px;
 
 			ul {
 				list-style: none outside none;

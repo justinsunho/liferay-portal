@@ -56,7 +56,6 @@
 				</#if>
 
 			</div>
-
 	</header>
 
 	<section id="content">
