@@ -4,8 +4,8 @@
 <layout-templates>
 	<custom>
 		<layout-template id="home-page" name="home page">
-			<template-path>\layouttpl\custom\home-page-layouttpl/home_page.tpl</template-path>
-			<thumbnail-path>\layouttpl\custom\home-page-layouttpl/home_page.png</thumbnail-path>
+			<template-path>/layouttpl/custom/home-page-layouttpl/home_page.tpl</template-path>
+			<thumbnail-path>/layouttpl/custom/home-page-layouttpl/home_page.png</thumbnail-path>
 		</layout-template>
 	</custom>
 </layout-templates>
