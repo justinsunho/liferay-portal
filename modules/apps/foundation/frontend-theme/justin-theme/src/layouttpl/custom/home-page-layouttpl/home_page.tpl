@@ -33,7 +33,7 @@
 			$processor.processColumn("column-8", "portlet-column-content portlet-column-content-last")
 		</div>
 	</div>
-	<div class="portlet-layout row">
+	<div class="portlet-layout row rowFive">
 		<div class="col-md-4 portlet-column portlet-column-first" id="column-9">
 			$processor.processColumn("column-9", "portlet-column-content portlet-column-content-first")
 		</div>

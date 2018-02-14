@@ -60,7 +60,7 @@
 
 	<section id="content">
 		<h1 class="hide-accessible">${the_title}</h1>
-
+		
 		<#if selectable>
 			<@liferay_util["include"] page=content_include />
 		<#else>
