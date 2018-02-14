@@ -368,6 +368,12 @@ html {
 				}
 			}
 
+			.rowThree{
+				margin: -5% -10%;
+				background-color: $grey;
+				padding-right: 5% 10%;
+			}
+
 			@media (max-width: $screen-sm-max) {
 				padding-top: 130px;
 			}
@@ -381,7 +387,7 @@ html {
 
 		#footer {
 			font-family: Montserrat, Helvetica, sans serif;
-			padding: 10px 5% 20px;
+			padding: 30px 5% 20px;
 
 			ul {
 				list-style: none outside none;

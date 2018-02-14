@@ -15,14 +15,6 @@
 			<setting configurable="true" key="twitter-link" type="text" />
 			<setting configurable="true" key="youtube-link" type="text" />
 		</settings>
-		<layout-templates>
-			<custom>
-				<layout-template id="home_page" name="home_page">
-					<template-path>/layoutttpl/custom/home_page.tpl</template-path>
-					<thumbnail-path>/layoutttpl/custom/home_page.png</thumbnail-path>
-				</layout-template>
-			</custom>
-		</layout-templates>
 		<portlet-decorator id="barebone" name="Barebone">
 			<portlet-decorator-css-class>portlet-barebone</portlet-decorator-css-class>
 		</portlet-decorator>
