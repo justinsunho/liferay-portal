@@ -5,6 +5,8 @@ $grey: #D1D1D1;
 $lightGrey: #F5F5F5;
 $orange: #FF8600;
 
+@import 'portlet_decorator';
+
 @include font-face('Merriweather', './aui/lexicon/fonts/Merriweather/Merriweather-Bold', $bold, normal, $asset-pipeline: false, $file-formats: ttf);
 @include font-face('Merriweather', './aui/lexicon/fonts/Merriweather/Merriweather-BoldItalic', $bold, italic, $asset-pipeline: false, $file-formats: ttf);
 @include font-face('Merriweather', './aui/lexicon/fonts/Merriweather/Merriweather-Italic', normal, italic, $asset-pipeline: false, $file-formats: ttf);
@@ -339,9 +341,7 @@ html {
 			}
 
 														img {
-															min-width: 100%;
-															min-height: 100%;
-															overflow: hidden;
+															object-fit: cover;
 														}
 
 			figure {
@@ -373,16 +373,6 @@ html {
 					}
 				}
 			}
-
-													.rowThree{
-														margin: -5% -10%;
-														background-color: $grey;
-														padding: 5% 10%;
-													}
-
-													.rowFive .portlet-column .portlet{
-														box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.2);
-													}
 
 			@media (max-width: $screen-sm-max) {
 				padding-top: 130px;
