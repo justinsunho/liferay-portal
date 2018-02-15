@@ -39,56 +39,67 @@
 					</a>
 
 					<ul class="dropdown-menu">
-
 						<#list nav_item.getChildren() as nav_child>
 							<#assign
+								nav_child_attr_has_popup =""
 								nav_child_attr_selected = ""
 								nav_child_css_class = ""
+								nav_child_layout = nav_child.getLayout()
 							/>
 
 							<#if nav_item.isSelected()>
 								<#assign
+									nav_child_attr_has_popup = "aria-haspopup ='true'"
 									nav_child_attr_selected = "aria-selected='true'"
 									nav_child_css_class = "selected"
 								/>
 							</#if>
 
-							<li ${nav_child_attr_selected} class="${nav_child_css_class}" id="layout_${nav_child.getLayoutId()}" role="presentation">
-								<a aria-labelledby="layout_${nav_child.getLayoutId()}" href="${nav_child.getURL()}" ${nav_child.getTarget()} role="menuitem">
-									${nav_child.getName()}
-								</a>
+							<#if !nav_child.hasChildren()>
+								<li ${nav_child_attr_selected} class="${nav_child_css_class}" id="layout_${nav_child.getLayoutId()}" role="presentation">
+									<a aria-labelledby="layout_${nav_child.getLayoutId()}" href="${nav_child.getURL()}" ${nav_child.getTarget()} role="menuitem">
+										${nav_child.getName()}
+									</a>
+								</li>
+							<#elseif nav_child.hasChildren()>
+								<li class="dropdown-submenu" role="menu">
+									<a aria-labelledby="layout_${nav_child.getLayoutId()}" class="nav-anchor" ${nav_child_attr_has_popup} href="${nav_child.getURL()}" ${nav_child.getTarget()} role="menuitem" tabindex="-1">
+										<span class="navItemSpan"><@liferay_theme["layout-icon"] layout=nav_item_layout />
+											${nav_child.getName()}
+										</span>
+										<i class="icon-chevron-left sub-menu"></i>
+										<i class="icon-chevron-down sub-menu"></i>
+									</a>
+									
 
-								<#if nav_child.hasChildren()>
 									<ul class="dropdown-menu">
-										<#list nav_child.getChildren() as nav_grand_child>
-											<#assign 
-												nav_grand_child_attr_selected = ""
-												nav_grand_child_css_class = ""
+									<#list nav_child.getChildren() as nav_grand_child>
+										<#assign
+											nav_grand_child_attr_selected = ""
+											nav_grand_child_css_class = ""
+										/>
+
+										<#if nav_child.isSelected()>
+											<#assign
+												nav_grand_child_attr_selected = "aria-selected='true'"
+												nav_grand_child_css_class = "selected"
 											/>
+										</#if>
 
-											<#if nav_child.isSelected()>
-												<#assign 
-													nav_grand_child_attr_selected = "aria-selected='true'"
-													nav_grand_child_css_class = "selected"
-												/>
-											</#if>
-
-											<li ${nav_grand_child_attr_selected} class="${nav_grand_child_css_class}" id="layout_${nav_grand_child.getLayoutId()}" role="presentation">
-												<a aria-lablelledby="layout_${nav_child.getLayoutId()}" href="${nav_grand_child.getURL()}" ${nav_grand_child.getTarget()} role="menuItem">
-													${nav_grand_child.getName()}
-												</a>
-											</li>
-										</#list>
+										<li ${nav_grand_child_attr_selected} class="${nav_grand_child_css_class}" id="layout_${nav_grand_child.getLayoutId()}" role="presentation">
+											<a aria-labelledby="layout_${nav_grand_child.getLayoutId()}" href="${nav_grand_child.getURL()}" ${nav_grand_child.getTarget()} role="menuitem">
+												${nav_grand_child.getName()}
+											</a>
+										</li>										
+									</#list>
 									</ul>
-								</#if>
-							</li>
-
+								</li>	
+							</#if>
 						</#list>
 					</ul>
 				</li>
 			</#if>
-		</#list>
-		
+		</#list>		
 	</ul>
 </nav>
 </div>

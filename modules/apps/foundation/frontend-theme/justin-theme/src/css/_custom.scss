@@ -238,6 +238,17 @@ html {
 							li {
 								background-color: #FFF;
 
+								&:hover {
+									a .icon-chevron-left.sub-menu {
+										display: none;
+									}
+
+									a .icon-chevron-down.sub-menu {
+										color: $orange;
+										display: inline;
+									}
+								}
+
 								a {
 									color: inherit;
 									font-weight: normal;
@@ -246,6 +257,22 @@ html {
 
 									&:hover {
 										color: $orange;
+										
+										ul {
+											display: inline;
+										}
+									}
+
+									.icon-chevron-down.sub-menu {
+										display: none;
+									}
+
+									.icon-chevron-left.sub-menu {
+										display: inline;
+									}
+
+									ul {
+										display: none;
 									}
 								}
 							}
