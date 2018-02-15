@@ -49,7 +49,7 @@ html {
 		font-size: $base;
 		height: 100%;
 		line-height: 1.75;
-		padding: 0px;
+		padding: 0;
 		position: relative;
 
 		::selection {
@@ -117,7 +117,7 @@ html {
 		}
 
 		.nav-down {
-			top: 0px;
+			top: 0;
 		}
 
 		@media (max-width: $screen-xs-max) {
@@ -128,7 +128,7 @@ html {
 
 		#banner {
 			background-color: #FFF;
-			box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+			box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
 			font-family: Montserrat, Helvetica, sans serif;
 			line-height: 1.5;
 			padding: 20px 7% 2px;
@@ -198,9 +198,36 @@ html {
 								color: $orange;
 								text-decoration: none;
 							}
+						}
 
-							&[aria-expanded='false'] .icon-chevron-down, &[aria-expanded='true'] .icon-chevron-left {
+						@media (min-width: $screen-sm-min) {
+							.icon-chevron-down {
 								display: none;
+							}
+
+							&:hover {
+								//background-color: $lightGrey;
+
+								.icon-chevron-left {
+									display: none;
+								}
+
+								.icon-chevron-down {
+									color: $orange;
+									display: inline;
+								}
+
+								a {
+									color: $orange;
+								}
+
+								ul {
+									display: block;
+
+									a {
+										color: #000;
+									}
+								}
 							}
 						}
 
@@ -227,15 +254,14 @@ html {
 				}
 			}
 
-			@media (max-width: $screen-sm-max) {
-				position: fixed;
-
+			@media (max-width: $screen-md-max) {
 				.navbar-header span {
-					font-size: $base + 16pt;
+					font-size: $base + 14pt;
 				}
 			}
 
 			@media (max-width: $screen-xs-max) {
+				position: fixed;
 
 				.row {
 					padding-bottom: 20px;
@@ -249,8 +275,15 @@ html {
 					font-size: $base + 12pt;
 				}
 
-				nav ul li a i {
-					font-size: $base;
+				nav ul li a {
+				
+					&[aria-expanded='false'] .icon-chevron-down, &[aria-expanded='true'] .icon-chevron-left {
+						display: none;
+					}
+
+					i {
+						font-size: $base;
+					}
 				}
 			}
 		}
@@ -260,7 +293,7 @@ html {
 		#content {
 			display: block;
 			margin: auto;
-			padding: 0% 5%;
+			padding: 0 5%;
 			padding-top: 2.5%;
 			width: 95%;
 
@@ -338,10 +371,6 @@ html {
 			var {
 				font-family: Inconsolata, monospace;
 				font-style: italic;
-			}
-
-			img {
-				object-fit: cover;
 			}
 
 			figure {

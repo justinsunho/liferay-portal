@@ -60,7 +60,7 @@
 
 	<section id="content">
 		<h1 class="hide-accessible">${the_title}</h1>
-		
+
 		<#if selectable>
 			<@liferay_util["include"] page=content_include />
 		<#else>
@@ -77,15 +77,12 @@
 
 		<footer id="footer" role="contentinfo">
 			<div class="row">
-				
 				<p class="col-xs-6 powered-by">
 					<@liferay.language key="powered-by" /> <a href="http://www.liferay.com" rel="external">Liferay</a>
 				</p>
-
 				<div class="col-xs-6 social-media-wrapper">
 					<#include "${full_templates_path}/social.ftl" />
 				</div>
-				
 			</div>
 		</footer>
 </div>

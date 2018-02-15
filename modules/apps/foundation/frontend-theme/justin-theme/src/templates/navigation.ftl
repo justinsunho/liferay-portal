@@ -54,7 +54,29 @@
 							</#if>
 
 							<li ${nav_child_attr_selected} class="${nav_child_css_class}" id="layout_${nav_child.getLayoutId()}" role="presentation">
-								<a aria-labelledby="layout_${nav_child.getLayoutId()}" href="${nav_child.getURL()}" ${nav_child.getTarget()} role="menuitem">${nav_child.getName()}</a>
+								<a aria-labelledby="layout_${nav_child.getLayoutId()}" href="${nav_child.getURL()}" ${nav_child.getTarget()} role="menuitem">
+									${nav_child.getName()}
+								</a>
+
+								<#if nav_child.hasChildren()>
+									<ul class="dropdown-menu">
+										<#list nav_child.getChildren() as nav_grand_child>
+											<#assign 
+												nav_grand_child_attr_selected = ""
+												nav_grand_child_css_class = ""
+											/>
+
+											<#if nav_child.isSelected()>
+												<#assign 
+													nav_grand_child_attr_selected = "aria-selected='true'"
+													nav_grand_child_css_class = "selected"
+												/>
+											</#if>
+
+											<li ${nav_grand_child_attr_selected} class="${nav_grand_child_css_class}" id="layout"
+										</#list>
+									</ul>
+								</#if>
 							</li>
 
 						</#list>
