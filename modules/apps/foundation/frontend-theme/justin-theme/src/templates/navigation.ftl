@@ -73,7 +73,11 @@
 												/>
 											</#if>
 
-											<li ${nav_grand_child_attr_selected} class="${nav_grand_child_css_class}" id="layout"
+											<li ${nav_grand_child_attr_selected} class="${nav_grand_child_css_class}" id="layout_${nav_grand_child.getLayoutId()}" role="presentation">
+												<a aria-lablelledby="layout_${nav_child.getLayoutId()}" href="${nav_grand_child.getURL()}" ${nav_grand_child.getTarget()} role="menuItem">
+													${nav_grand_child.getName()}
+												</a>
+											</li>
 										</#list>
 									</ul>
 								</#if>
