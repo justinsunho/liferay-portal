@@ -63,7 +63,7 @@
 								</li>
 							<#elseif nav_child.hasChildren()>
 								<li class="dropdown-submenu" role="menu">
-									<a aria-labelledby="layout_${nav_child.getLayoutId()}" class="nav-anchor" ${nav_child_attr_has_popup} href="${nav_child.getURL()}" ${nav_child.getTarget()} role="menuitem" tabindex="-1">
+									<a aria-labelledby="layout_${nav_child.getLayoutId()}" class="nav-anchor" ${nav_child_attr_has_popup} href="${nav_child.getURL()}" ${nav_child.getTarget()} role="menuitem" tabindex="0">
 										<span class="navItemSpan"><@liferay_theme["layout-icon"] layout=nav_item_layout />
 											${nav_child.getName()}
 										</span>

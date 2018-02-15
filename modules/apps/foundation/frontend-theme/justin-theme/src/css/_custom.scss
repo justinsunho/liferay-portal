@@ -227,6 +227,30 @@ html {
 									a {
 										color: #000;
 									}
+
+									li {
+										ul.dropdown-menu {
+											display: none;
+										}
+
+										&:hover {
+											a .icon-chevron-left.sub-menu {
+												display: none;
+											}
+
+											a .icon-chevron-down.sub-menu {
+												color: $orange;
+												display: inline;
+											}
+
+											ul.dropdown-menu {
+												display: inline;
+												left: 100%;
+												margin-top: -30px;
+												top: auto;
+											}
+										}
+									}
 								}
 							}
 						}
@@ -238,17 +262,6 @@ html {
 							li {
 								background-color: #FFF;
 
-								&:hover {
-									a .icon-chevron-left.sub-menu {
-										display: none;
-									}
-
-									a .icon-chevron-down.sub-menu {
-										color: $orange;
-										display: inline;
-									}
-								}
-
 								a {
 									color: inherit;
 									font-weight: normal;
@@ -259,7 +272,7 @@ html {
 										color: $orange;
 										
 										ul {
-											display: inline;
+											display: block;
 										}
 									}
 
@@ -269,10 +282,6 @@ html {
 
 									.icon-chevron-left.sub-menu {
 										display: inline;
-									}
-
-									ul {
-										display: none;
 									}
 								}
 							}
