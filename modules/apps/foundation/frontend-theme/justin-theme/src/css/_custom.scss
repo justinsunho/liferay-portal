@@ -200,7 +200,7 @@ html {
 							}
 						}
 
-						@media (min-width: $screen-sm-min) {
+						//@media (min-width: $screen-sm-min) {
 							.icon-chevron-down {
 								display: none;
 							}
@@ -229,6 +229,8 @@ html {
 									}
 
 									li {
+										font-weight: $bold;
+
 										ul.dropdown-menu {
 											display: none;
 										}
@@ -253,7 +255,7 @@ html {
 									}
 								}
 							}
-						}
+						//}
 
 						ul {
 							overflow: visible;
@@ -264,13 +266,14 @@ html {
 
 								a {
 									color: inherit;
+									display: block;
 									font-weight: normal;
 									text-align: left;
 									text-decoration: none;
 
 									&:hover {
 										color: $orange;
-										
+
 										ul {
 											display: block;
 										}
@@ -302,6 +305,7 @@ html {
 				.row {
 					padding-bottom: 20px;
 				}
+
 				.nav-anchor {
 					display: inline-block;
 					width: 80%;
@@ -312,7 +316,6 @@ html {
 				}
 
 				nav ul li a {
-				
 					&[aria-expanded='false'] .icon-chevron-down, &[aria-expanded='true'] .icon-chevron-left {
 						display: none;
 					}

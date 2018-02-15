@@ -69,8 +69,7 @@
 										</span>
 										<i class="icon-chevron-left sub-menu"></i>
 										<i class="icon-chevron-down sub-menu"></i>
-									</a>
-									
+									</a> 
 
 									<ul class="dropdown-menu">
 									<#list nav_child.getChildren() as nav_grand_child>
@@ -87,9 +86,11 @@
 										</#if>
 
 										<li ${nav_grand_child_attr_selected} class="${nav_grand_child_css_class}" id="layout_${nav_grand_child.getLayoutId()}" role="presentation">
-											<a aria-labelledby="layout_${nav_grand_child.getLayoutId()}" href="${nav_grand_child.getURL()}" ${nav_grand_child.getTarget()} role="menuitem">
-												${nav_grand_child.getName()}
-											</a>
+											<p>
+												<a aria-labelledby="layout_${nav_grand_child.getLayoutId()}" href="${nav_grand_child.getURL()}" ${nav_grand_child.getTarget()} role="menuitem">
+													${nav_grand_child.getName()}
+												</a>
+											</p>
 										</li>										
 									</#list>
 									</ul>
