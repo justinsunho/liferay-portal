@@ -63,13 +63,15 @@
 								</li>
 							<#elseif nav_child.hasChildren()>
 								<li class="dropdown-submenu" role="menu">
-									<a aria-labelledby="layout_${nav_child.getLayoutId()}" class="nav-anchor" ${nav_child_attr_has_popup} href="${nav_child.getURL()}" ${nav_child.getTarget()} role="menuitem" tabindex="0">
+									<a aria-labelledby="layout_${nav_child.getLayoutId()}" class="nav-anchor" ${nav_child_attr_has_popup} href="${nav_child.getURL()}" ${nav_child.getTarget()} role="menuitem" tabindex="-1">
 										<span class="navItemSpan"><@liferay_theme["layout-icon"] layout=nav_item_layout />
 											${nav_child.getName()}
 										</span>
+									</a>
+									<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link sub-button" data-toggle="dropdown" href="#" role="button">
 										<i class="icon-chevron-left sub-menu"></i>
 										<i class="icon-chevron-down sub-menu"></i>
-									</a> 
+									</a>
 
 									<ul class="dropdown-menu">
 									<#list nav_child.getChildren() as nav_grand_child>

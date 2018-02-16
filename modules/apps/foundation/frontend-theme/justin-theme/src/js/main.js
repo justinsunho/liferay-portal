@@ -78,4 +78,17 @@ function hideHeadingScroll() {
 			lastScrollTop = scrollTop;
 		}
 	}
+
+	var subButton = $('.sub-button');
+	var dropdownToggle = $('.dropdown-toggle');
+	var parentButton = $('.dropdown');
+
+	subButton.click(keepOpen);
+
+	function keepOpen() {
+		console.log('fjdksl;a');
+		parentButton.addClass('open');
+		dropdownToggle.attr('aria-expanded', 'true');
+	}
+
 }

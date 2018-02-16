@@ -200,14 +200,12 @@ html {
 							}
 						}
 
-						//@media (min-width: $screen-sm-min) {
+						@media (min-width: $screen-sm-min) {
 							.icon-chevron-down {
 								display: none;
 							}
 
 							&:hover {
-								//background-color: $lightGrey;
-
 								.icon-chevron-left {
 									display: none;
 								}
@@ -246,7 +244,7 @@ html {
 											}
 
 											ul.dropdown-menu {
-												display: inline;
+												display: block;
 												left: 100%;
 												margin-top: -30px;
 												top: auto;
@@ -255,7 +253,7 @@ html {
 									}
 								}
 							}
-						//}
+						}
 
 						ul {
 							overflow: visible;
