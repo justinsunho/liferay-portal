@@ -74,27 +74,27 @@
 									</a>
 
 									<ul class="dropdown-menu">
-									<#list nav_child.getChildren() as nav_grand_child>
-										<#assign
-											nav_grand_child_attr_selected = ""
-											nav_grand_child_css_class = ""
-										/>
-
-										<#if nav_child.isSelected()>
+										<#list nav_child.getChildren() as nav_grand_child>
 											<#assign
-												nav_grand_child_attr_selected = "aria-selected='true'"
-												nav_grand_child_css_class = "selected"
+												nav_grand_child_attr_selected = ""
+												nav_grand_child_css_class = ""
 											/>
-										</#if>
 
-										<li ${nav_grand_child_attr_selected} class="${nav_grand_child_css_class}" id="layout_${nav_grand_child.getLayoutId()}" role="presentation">
-											<p>
-												<a aria-labelledby="layout_${nav_grand_child.getLayoutId()}" href="${nav_grand_child.getURL()}" ${nav_grand_child.getTarget()} role="menuitem">
-													${nav_grand_child.getName()}
-												</a>
-											</p>
-										</li>										
-									</#list>
+											<#if nav_child.isSelected()>
+												<#assign
+													nav_grand_child_attr_selected = "aria-selected='true'"
+													nav_grand_child_css_class = "selected"
+												/>
+											</#if>
+
+											<li ${nav_grand_child_attr_selected} class="${nav_grand_child_css_class}" id="layout_${nav_grand_child.getLayoutId()}" role="presentation">
+												<p>
+													<a aria-labelledby="layout_${nav_grand_child.getLayoutId()}" href="${nav_grand_child.getURL()}" ${nav_grand_child.getTarget()} role="menuitem">
+														${nav_grand_child.getName()}
+													</a>
+												</p>
+											</li>										
+										</#list>
 									</ul>
 								</li>	
 							</#if>
