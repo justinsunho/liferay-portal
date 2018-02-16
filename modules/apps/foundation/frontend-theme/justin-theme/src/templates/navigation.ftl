@@ -33,10 +33,10 @@
 							${nav_item.getName()}
 						</span>
 					</a>
-					<span class="root-button">
+					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button">
 						<i class="icon-chevron-left"></i>
 						<i class="icon-chevron-down"></i>
-					</span>
+					</a>
 
 					<ul class="dropdown-menu">
 						<#list nav_item.getChildren() as nav_child>

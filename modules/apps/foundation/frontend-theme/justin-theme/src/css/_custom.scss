@@ -4,6 +4,7 @@ $borderBlack: #202020;
 $grey: #D1D1D1;
 $lightGrey: #F5F5F5;
 $orange: #FF8600;
+$semiBold: 600;
 
 @import 'portlet_decorator';
 
@@ -16,6 +17,8 @@ $orange: #FF8600;
 @include font-face('Montserrat', './aui/lexicon/fonts/Montserrat/Montserrat-BoldItalic', $bold, italic, $asset-pipeline: false, $file-formats: ttf);
 @include font-face('Montserrat', './aui/lexicon/fonts/Montserrat/Montserrat-Italic', normal, italic, $asset-pipeline: false, $file-formats: ttf);
 @include font-face('Montserrat', './aui/lexicon/fonts/Montserrat/Montserrat-Regular', normal, normal, $asset-pipeline: false, $file-formats: ttf);
+@include font-face('Montserrat', './aui/lexicon/fonts/Montserrat/Montserrat-SemiBold', $semiBold, normal, $asset-pipeline: false, $file-formats: ttf);
+
 
 %border-props {
 	border: 1px solid $grey;
@@ -265,7 +268,7 @@ html {
 								a {
 									color: inherit;
 									display: block;
-									font-weight: normal;
+									font-weight: $semiBold;
 									text-align: left;
 									text-decoration: none;
 
@@ -275,7 +278,7 @@ html {
 
 										ul {
 											display: block;
-											left: 50%;
+											font-weight: normal;
 										}
 									}
 
@@ -298,18 +301,24 @@ html {
 					font-size: $base + 14pt;
 				}
 
-				#navigation ul li ul li:hover {
-					ul {
-						display: block;
+				#navigation ul li ul li {
+					ul li a {
+						margin-left: 20%;
 					}
 
-					.icon-chevron-left {
-						display: none;
-					}
+					&:hover {
+						ul {
+							display: block;
+						}
 
-					.icon-chevron-down {
-						color: $orange;
-						display: inline;
+						.icon-chevron-left {
+							display: none;
+						}
+
+						.icon-chevron-down {
+							color: $orange;
+							display: inline;
+						}
 					}
 				}
 			}
