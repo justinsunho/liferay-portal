@@ -3,6 +3,7 @@ $bold: 700;
 $borderBlack: #202020;
 $grey: #D1D1D1;
 $lightGrey: #F5F5F5;
+$medium: 500;
 $orange: #FF8600;
 $semiBold: 600;
 
@@ -16,6 +17,7 @@ $semiBold: 600;
 @include font-face('Montserrat', './aui/lexicon/fonts/Montserrat/Montserrat-Bold', $bold, normal, $asset-pipeline: false, $file-formats: ttf);
 @include font-face('Montserrat', './aui/lexicon/fonts/Montserrat/Montserrat-BoldItalic', $bold, italic, $asset-pipeline: false, $file-formats: ttf);
 @include font-face('Montserrat', './aui/lexicon/fonts/Montserrat/Montserrat-Italic', normal, italic, $asset-pipeline: false, $file-formats: ttf);
+@include font-face('Montserrat', './aui/lexicon/fonts/Montserrat/Montserrat-Medium', $medium, normal, $asset-pipeline: false, $file-formats: ttf);
 @include font-face('Montserrat', './aui/lexicon/fonts/Montserrat/Montserrat-Regular', normal, normal, $asset-pipeline: false, $file-formats: ttf);
 @include font-face('Montserrat', './aui/lexicon/fonts/Montserrat/Montserrat-SemiBold', $semiBold, normal, $asset-pipeline: false, $file-formats: ttf);
 
@@ -194,7 +196,7 @@ html {
 							text-decoration: none;
 
 							i {
-								font-size: $base - 4pt;
+								font-size: $base - 2pt;
 							}
 
 							&:hover {
@@ -227,6 +229,7 @@ html {
 
 									a {
 										color: #000;
+										float: left;
 									}
 
 									li {
@@ -237,11 +240,11 @@ html {
 										}
 
 										&:hover {
-											a .icon-chevron-left.sub-menu {
+											a span .icon-chevron-left.sub-menu {
 												display: none;
 											}
 
-											a .icon-chevron-down.sub-menu {
+											a span .icon-chevron-down.sub-menu {
 												color: $orange;
 												display: inline;
 											}
@@ -249,7 +252,7 @@ html {
 											ul.dropdown-menu {
 												display: block;
 												left: 100%;
-												margin-top: -30px;
+												//margin-top: -30px;
 												top: auto;
 											}
 										}
@@ -268,7 +271,7 @@ html {
 								a {
 									color: inherit;
 									display: block;
-									font-weight: $semiBold;
+									font-weight: $medium;
 									text-align: left;
 									text-decoration: none;
 
@@ -281,24 +284,20 @@ html {
 											font-weight: normal;
 										}
 									}
-
-									.icon-chevron-down.sub-menu {
-										display: none;
-									}
-
-									.icon-chevron-left.sub-menu {
-										display: inline;
-									}
 								}
 
-								ul {
-									li {
-										p {
-											a {
-												font-weight: normal;
-											}
-										}
-									}
+								a span .icon-chevron-down.sub-menu {
+									display: none;
+									font-size: $base - 4pt;
+								}
+
+								a span .icon-chevron-left.sub-menu {
+									display: inline;
+									font-size: $base - 4pt;
+								}
+
+								ul li p a {
+									font-weight: normal;
 								}
 							}
 						}
@@ -308,12 +307,12 @@ html {
 
 			@media (max-width: $screen-md-max) {
 				.navbar-header span {
-					font-size: $base + 14pt;
+					font-size: $base + 12pt;
 				}
 
 				#navigation ul li ul li {
 					ul li a {
-						margin-left: 20%;
+						margin-left: 10%;
 					}
 
 					&:hover {

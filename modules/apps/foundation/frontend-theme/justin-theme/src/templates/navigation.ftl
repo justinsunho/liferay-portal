@@ -34,8 +34,10 @@
 						</span>
 					</a>
 					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button">
-						<i class="icon-chevron-left"></i>
-						<i class="icon-chevron-down"></i>
+						<span class="root-icon">
+							<i class="icon-chevron-left"></i>
+							<i class="icon-chevron-down"></i>
+						</span>
 					</a>
 
 					<ul class="dropdown-menu">
@@ -67,7 +69,7 @@
 										<span class="navItemSpan"><@liferay_theme["layout-icon"] layout=nav_item_layout />
 											${nav_child.getName()}
 										</span>
-										<span class="sub-button">
+										<span class="sub-Icon">
 											<i class="icon-chevron-left sub-menu"></i>
 											<i class="icon-chevron-down sub-menu"></i>
 										</span>
