@@ -8,6 +8,7 @@ $orange: #FF8600;
 $semiBold: 600;
 
 @import 'portlet_decorator';
+@import 'layout_decorator';
 
 @include font-face('Merriweather', './aui/lexicon/fonts/Merriweather/Merriweather-Bold', $bold, normal, $asset-pipeline: false, $file-formats: ttf);
 @include font-face('Merriweather', './aui/lexicon/fonts/Merriweather/Merriweather-BoldItalic', $bold, italic, $asset-pipeline: false, $file-formats: ttf);
@@ -20,7 +21,6 @@ $semiBold: 600;
 @include font-face('Montserrat', './aui/lexicon/fonts/Montserrat/Montserrat-Medium', $medium, normal, $asset-pipeline: false, $file-formats: ttf);
 @include font-face('Montserrat', './aui/lexicon/fonts/Montserrat/Montserrat-Regular', normal, normal, $asset-pipeline: false, $file-formats: ttf);
 @include font-face('Montserrat', './aui/lexicon/fonts/Montserrat/Montserrat-SemiBold', $semiBold, normal, $asset-pipeline: false, $file-formats: ttf);
-
 
 %border-props {
 	border: 1px solid $grey;
@@ -252,7 +252,7 @@ html {
 											ul.dropdown-menu {
 												display: block;
 												left: 100%;
-												//margin-top: -30px;
+												margin-top: -5%;
 												top: auto;
 											}
 										}
@@ -274,6 +274,7 @@ html {
 									font-weight: $medium;
 									text-align: left;
 									text-decoration: none;
+									width: 100%;
 
 									&:hover {
 										background-color: $lightGrey;
@@ -312,7 +313,7 @@ html {
 
 				#navigation ul li ul li {
 					ul li a {
-						margin-left: 10%;
+						margin-left: 20%;
 					}
 
 					&:hover {
