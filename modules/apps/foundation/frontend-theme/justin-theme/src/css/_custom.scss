@@ -273,8 +273,8 @@ html {
 									text-decoration: none;
 
 									&:hover {
-										color: $orange;
 										background-color: $lightGrey;
+										color: $orange;
 
 										ul {
 											display: block;
@@ -288,6 +288,16 @@ html {
 
 									.icon-chevron-left.sub-menu {
 										display: inline;
+									}
+								}
+
+								ul {
+									li {
+										p {
+											a {
+												font-weight: normal;
+											}
+										}
 									}
 								}
 							}
