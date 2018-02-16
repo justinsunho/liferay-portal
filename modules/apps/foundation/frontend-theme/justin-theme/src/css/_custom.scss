@@ -298,20 +298,20 @@ html {
 					font-size: $base + 14pt;
 				}
 
-				// #navigation ul li ul li:hover {
-				// 	ul {
-				// 		display: block;
-				// 	}
+				#navigation ul li ul li:hover {
+					ul {
+						display: block;
+					}
 
-				// 	.icon-chevron-left {
-				// 		display: none;
-				// 	}
+					.icon-chevron-left {
+						display: none;
+					}
 
-				// 	.icon-chevron-down {
-				// 		color: $orange;
-				// 		display: inline;
-				// 	}
-				// }
+					.icon-chevron-down {
+						color: $orange;
+						display: inline;
+					}
+				}
 			}
 
 			@media (max-width: $screen-xs-max) {

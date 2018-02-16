@@ -33,10 +33,10 @@
 							${nav_item.getName()}
 						</span>
 					</a>
-					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="presentation">
+					<span class="root-button">
 						<i class="icon-chevron-left"></i>
 						<i class="icon-chevron-down"></i>
-					</a>
+					</span>
 
 					<ul class="dropdown-menu">
 						<#list nav_item.getChildren() as nav_child>
@@ -67,14 +67,10 @@
 										<span class="navItemSpan"><@liferay_theme["layout-icon"] layout=nav_item_layout />
 											${nav_child.getName()}
 										</span>
-										<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="presentation">
+										<span class="sub-button">
 											<i class="icon-chevron-left sub-menu"></i>
 											<i class="icon-chevron-down sub-menu"></i>
-										</a>
-										<#-- <span class="sub-button">
-											<i class="icon-chevron-left sub-menu"></i>
-											<i class="icon-chevron-down sub-menu"></i>
-										</span> -->
+										</span>
 									</a>
 
 									<ul class="dropdown-menu">
