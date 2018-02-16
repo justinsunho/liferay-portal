@@ -79,16 +79,16 @@ function hideHeadingScroll() {
 		}
 	}
 
-	var subButton = $('.sub-button');
-	var dropdownToggle = $('.dropdown-toggle');
-	var parentButton = $('.dropdown');
+	// var subButton = $('.sub-button');
+	// var dropdownToggle = $('.dropdown-toggle.nav-link');
+	// var parentButton = $('.dropdown.lrf-nav-deletable.lfr-nav-sortable');
 
-	subButton.click(keepOpen);
+	// subButton.click(keepOpen);
 
-	function keepOpen() {
-		console.log('fjdksl;a');
-		parentButton.addClass('open');
-		dropdownToggle.attr('aria-expanded', 'true');
-	}
+	// function keepOpen() {
+	// 	console.log('fjdksl;a');
+	// 	parentButton.addClass('open');
+	// 	dropdownToggle.attr('aria-expanded', 'true');
+	// }
 
 }

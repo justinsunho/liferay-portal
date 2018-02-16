@@ -271,9 +271,11 @@ html {
 
 									&:hover {
 										color: $orange;
+										background-color: $lightGrey;
 
 										ul {
 											display: block;
+											left: 50%;
 										}
 									}
 
@@ -295,6 +297,21 @@ html {
 				.navbar-header span {
 					font-size: $base + 14pt;
 				}
+
+				// #navigation ul li ul li:hover {
+				// 	ul {
+				// 		display: block;
+				// 	}
+
+				// 	.icon-chevron-left {
+				// 		display: none;
+				// 	}
+
+				// 	.icon-chevron-down {
+				// 		color: $orange;
+				// 		display: inline;
+				// 	}
+				// }
 			}
 
 			@media (max-width: $screen-xs-max) {
