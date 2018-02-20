@@ -205,7 +205,71 @@ html {
 							}
 						}
 
+						ul {
+							overflow: visible;
+							text-align: center;
+
+							li {
+								background-color: #FFF;
+
+								a {
+									color: inherit;
+									display: block;
+									font-weight: $medium;
+									text-align: left;
+									text-decoration: none;
+									width: 100%;
+
+									&:hover {
+										background-color: $lightGrey;
+										color: $orange;
+
+										ul {
+											display: block;
+											font-weight: normal;
+										}
+									}
+								}
+
+								a.dropdown-toggle.nav-link {
+									background-color: #FFF;
+									display: inline;
+									width: 10%;
+								}
+
+								a span .icon-chevron-down.sub-menu {
+									display: none;
+									font-size: $base - 4pt;
+								}
+
+								a span .icon-chevron-left.sub-menu {
+									display: inline;
+									font-size: $base - 4pt;
+								}
+
+								ul li p a {
+									font-weight: normal;
+									width: 80%;
+								}
+							}
+
+							li.dropdown-submenu.open {
+								a span .icon-chevron-left {
+									display: none;
+								}
+
+								a span .icon-chevron-down {
+									color: $orange;
+									display: inline;
+								}
+							}
+						}
+
 						@media (min-width: $screen-sm-min) {
+							ul li a .sub-Icon {
+								display: none;
+							}
+
 							.icon-chevron-down {
 								display: none;
 							}
@@ -252,53 +316,11 @@ html {
 											ul.dropdown-menu {
 												display: block;
 												left: 100%;
-												margin-top: -5%;
+												//margin-top: -5%;
 												top: auto;
 											}
 										}
 									}
-								}
-							}
-						}
-
-						ul {
-							overflow: visible;
-							text-align: center;
-
-							li {
-								background-color: #FFF;
-
-								a {
-									color: inherit;
-									display: block;
-									font-weight: $medium;
-									text-align: left;
-									text-decoration: none;
-									width: 100%;
-
-									&:hover {
-										background-color: $lightGrey;
-										color: $orange;
-
-										ul {
-											display: block;
-											font-weight: normal;
-										}
-									}
-								}
-
-								a span .icon-chevron-down.sub-menu {
-									display: none;
-									font-size: $base - 4pt;
-								}
-
-								a span .icon-chevron-left.sub-menu {
-									display: inline;
-									font-size: $base - 4pt;
-								}
-
-								ul li p a {
-									font-weight: normal;
 								}
 							}
 						}
@@ -313,22 +335,8 @@ html {
 
 				#navigation ul li ul li {
 					ul li a {
-						margin-left: 20%;
-					}
+						margin-left: 15%;
 
-					&:hover {
-						ul {
-							display: block;
-						}
-
-						.icon-chevron-left {
-							display: none;
-						}
-
-						.icon-chevron-down {
-							color: $orange;
-							display: inline;
-						}
 					}
 				}
 			}

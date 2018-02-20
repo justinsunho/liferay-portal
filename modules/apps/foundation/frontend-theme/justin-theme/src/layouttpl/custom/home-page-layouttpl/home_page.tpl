@@ -2,7 +2,7 @@
 	<div class="portlet-layout row">
 		<div class="col-md-12 portlet-column portlet-column-only" id="column-1">
 			$processor.processColumn("column-1", "portlet-column-content portlet-column-content-only")
-			$processor.processPortlet("com.liferay.portal.kernel.model.UserGroup", $portletProviderAction.VIEW)
+			$processor.processPortlet("com.liferay.portal.kernel.servlet.taglib.ui.BreadcrumbEntry", $portletProviderAction.VIEW)
 		</div>
 	</div>
 	<div class="portlet-layout row">

@@ -33,10 +33,10 @@ function hideHeadingScroll() {
 	var navbarSupportedContent = $('#navbarSupportedContent');
 	var navbarToggle = $('.navbar-toggle');
 	var scrolling;
+	var ulDropdown = $('ul.dropdown-menu [data-toggle=dropdown]');
 
 	$(window).scroll(
-		function(event) {
-
+		function(e) {
 			scrolling = true;
 		}
 	);
@@ -79,16 +79,15 @@ function hideHeadingScroll() {
 		}
 	}
 
-	// var subButton = $('.sub-button');
-	// var dropdownToggle = $('.dropdown-toggle.nav-link');
-	// var parentButton = $('.dropdown.lrf-nav-deletable.lfr-nav-sortable');
+	ulDropdown.on('click', 
+		function(e) {
+			e.preventDefault(); //stop the original href 
 
-	// subButton.click(keepOpen);
+			e.stopPropagation(); //stop menu from closing if its open
 
-	// function keepOpen() {
-	// 	console.log('fjdksl;a');
-	// 	parentButton.addClass('open');
-	// 	dropdownToggle.attr('aria-expanded', 'true');
-	// }
+			ulDropdown.parent().removeClass('open'); //closes other menus 
 
+			$(this).parent().addClass('open');
+		}
+	);
 }
