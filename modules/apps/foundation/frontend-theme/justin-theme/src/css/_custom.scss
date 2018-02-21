@@ -128,12 +128,7 @@ html {
 		.lower-position {
 			background-color: #FFF;
 			box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
-		}
-
-		.higher-position {
-			color: #FFF;
-		}
-			
+		}	
 
 		@media (max-width: $screen-xs-max) {
 			background-color: #FFF;
@@ -337,7 +332,7 @@ html {
 				}
 			}
 
-			@media (max-width: $screen-md-max) {
+			@media (max-width: $screen-md-max) {				
 				.navbar-header span {
 					font-size: $base + 12pt;
 				}
@@ -345,12 +340,13 @@ html {
 				#navigation ul li ul li {
 					ul li a {
 						margin-left: 15%;
-
 					}
 				}
 			}
 
 			@media (max-width: $screen-xs-max) {
+				background-color: #FFF;
+				box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
 				position: fixed;
 
 				.row {
@@ -390,7 +386,7 @@ html {
 			display: block;
 			margin: auto;
 			padding: 0 5%;
-			padding-top: 2.5%;
+			//padding-top: 2.5%;
 			width: 95%;
 
 			h1, h2, h3, h4, h5, h6 {
@@ -469,42 +465,12 @@ html {
 				font-style: italic;
 			}
 
-			figure {
-				margin: 0;
-				overflow: hidden;
-				position: relative;
-				width: 200px;
-
-				img {
-					transition: all 0.3s;
-					width: 100%;
-				}
-
-				figcaption {
-					background-color: #FFF;
-					display: inline-block;
-					height: 30px;
-				}
-
-				&:hover {
-					img {
-						border-color: $orange;
-						@include prefixer(transform, scale(1.1), ('moz', 'webkit'));
-
-						figcaption {
-							color: $orange;
-							font-style: italic;
-						}
-					}
-				}
-			}
-
 			@media (max-width: $screen-sm-max) {
-				padding-top: 130px;
+				//padding-top: 130px;
 			}
 
 			@media (max-width: $screen-xs-max) {
-				padding-top: 140px;
+				//padding-top: 140px;
 			}
 		}
 

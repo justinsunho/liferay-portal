@@ -2,8 +2,6 @@
 	<div class="portlet-layout row">
 		<div class="col-md-12 portlet-column portlet-column-only" id="column-1">
 			$processor.processColumn("column-1", "portlet-column-content portlet-column-content-only")
-<!-- 			$processor.processPortlet("com.liferay.currency.converter.web.internal.portlet.CurrencyConverterPortlet", $portletProviderAction.ADD) -->
-			$processor.processPortlet("com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_CQtUF6keKfqN")
 		</div>
 	</div>
 	<div class="portlet-layout row">

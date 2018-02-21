@@ -36,6 +36,7 @@ function hideHeadingScroll() {
 	var ulDropdown = $('ul.dropdown-menu [data-toggle=dropdown]');
 
 	var headerThreshold = 300;
+	var screenSm = 768;
 
 	$(window).scroll(
 		function(e) {
@@ -61,12 +62,10 @@ function hideHeadingScroll() {
 
 		console.log(scrollTop);
 
-		if( scrollTop <= headerThreshold) {
-			console.log('fdsajfjf');
-			banner.removeClass('lower-position').addClass('higher-position');
+		if( scrollTop <= headerThreshold && banner.width() >= 768) {
+			banner.removeClass('lower-position');
 		}else {
-			console.log('fdjsak;lfdsaei');
-			banner.removeClass('higher-position').addClass('lower-position');
+			banner.addClass('lower-position');
 		}
 
 		if (Math.abs(lastScrollTop - scrollTop) > delta) {

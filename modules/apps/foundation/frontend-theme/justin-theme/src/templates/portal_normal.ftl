@@ -56,14 +56,13 @@
 				</#if>
 
 			</div>
+
+		<@liferay_portlet["runtime"] portletProviderAction=VIEW portletProviderClassName="com.liferay.asset.publisher.web.portlet.AssetPublisherPortlet" />
+
 	</header>
 
 	<section id="content">
 		<h1 class="hide-accessible">${the_title}</h1>
-<#-- 
-		<@liferay_portlet["runtime"] defaultPreferences="${freeMarkerPortletPreferences}" portletProviderAction=portletProviderAction.VIEW portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" />
-
-		<@liferay_portlet["runtime"] defaultPreferences="${freeMarkerPortletPreferences}" portletProviderAction=portletProviderAction.EDIT portletName="com_liferay_dynamic_data_lists_form_web_portlet_DDLFormAdminPortlet" /> -->
 
 		<#if selectable>
 			<@liferay_util["include"] page=content_include />

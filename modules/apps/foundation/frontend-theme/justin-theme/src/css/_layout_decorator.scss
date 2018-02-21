@@ -9,7 +9,16 @@ $grey: #D1D1D1;
 			padding: 30px;
 		}
 
-		//media request medium and up.
+		#column-1 {
+			.portlet-content {
+				visibility: hidden;
+			
+				img {
+					visibility: visible;
+				}
+			}	
+		}
+
 		#column-6, #column-9 {
 			@media (min-width: $screen-sm-min) {
 				border-left: 2px solid $grey;
@@ -21,7 +30,6 @@ $grey: #D1D1D1;
 				}
 			}
 		}
-		//medium and down, border-top
 	}
 
 	.video-row {
