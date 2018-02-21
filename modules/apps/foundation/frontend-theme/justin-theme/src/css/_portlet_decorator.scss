@@ -1,7 +1,9 @@
 // Use this file, and mixins to customize specific portlets.
 
-.portlet-decorate .portlet-content {
+.portlet-quanta .portlet-content {
+	background: #FFF;
 	border: none;
+	border-radius: 0;
 
 	.lfr-preview-file-image-current-column {
 		padding: 0px;
@@ -13,8 +15,4 @@
 		overflow: hidden;
 		width: 100%;
 	}
-}
-
-.portlet-quanta .portlet-content {
-	background-color: #FFF;
 }

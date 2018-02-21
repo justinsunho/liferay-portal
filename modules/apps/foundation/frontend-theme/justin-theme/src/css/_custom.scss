@@ -125,6 +125,16 @@ html {
 			top: 0;
 		}
 
+		.lower-position {
+			background-color: #FFF;
+			box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+		}
+
+		.higher-position {
+			color: #FFF;
+		}
+			
+
 		@media (max-width: $screen-xs-max) {
 			background-color: #FFF;
 		}
@@ -132,8 +142,7 @@ html {
 		/* ---------- Banner ---------- */
 
 		#banner {
-			background-color: #FFF;
-			box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+		
 			font-family: Montserrat, Helvetica, sans serif;
 			line-height: 1.5;
 			padding: 20px 7% 2px;

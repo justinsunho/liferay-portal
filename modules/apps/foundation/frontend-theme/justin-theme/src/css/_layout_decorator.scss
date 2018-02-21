@@ -1,8 +1,38 @@
-.home-page{
+$borderBlck: #202020;
+$grey: #D1D1D1;
 
-	.row-1 {
+.home-page {
+	.row {
+		margin-bottom: 30px;
 
-		#column-1 {
+		.portlet-column {
+			padding: 30px;
 		}
+
+		//media request medium and up.
+		#column-6, #column-9 {
+			@media (min-width: $screen-sm-min) {
+				border-left: 2px solid $grey;
+			}
+
+			@media (max-width: $screen-xs-max) {
+				.portlet-content-container {
+					border-top: 2px solid $grey;
+				}
+			}
+		}
+		//medium and down, border-top
+	}
+
+	.video-row {
+		background-color: #202020;
+		padding: 2.5% 10% 15%;
+		margin: 0 -10% -10%;
+	}
+
+	.grey-row {
+		background-color: $grey;
+		padding: 0 20%;
+		margin: 0 -10%;
 	}
 }
