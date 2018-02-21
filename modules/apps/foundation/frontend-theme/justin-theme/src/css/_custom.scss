@@ -128,7 +128,15 @@ html {
 		.lower-position {
 			background-color: #FFF;
 			box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
-		}	
+		}
+
+		.higher-position {
+			nav ul li { 
+				.nav-anchor, .nav-link {
+					color: #FFF;
+				}
+			}
+		}
 
 		@media (max-width: $screen-xs-max) {
 			background-color: #FFF;
@@ -136,8 +144,7 @@ html {
 
 		/* ---------- Banner ---------- */
 
-		#banner {
-		
+		.banner {
 			font-family: Montserrat, Helvetica, sans serif;
 			line-height: 1.5;
 			padding: 20px 7% 2px;
@@ -259,6 +266,7 @@ html {
 
 							li.dropdown-submenu.open {
 								a span .icon-chevron-left {
+									color: #000;
 									display: none;
 								}
 

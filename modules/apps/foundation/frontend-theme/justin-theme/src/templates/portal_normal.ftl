@@ -21,7 +21,7 @@
 <@liferay.control_menu />
 
 <div class="container-fluid" id="wrapper">
-	<header class="nav-down" id="banner" role="banner">
+	<header class="banner higher-position nav-down" id="banner" role="banner">
 			<div class="row">
 				<div class="col-xs-10"></div>
 				<div clas="col-xs-2">
@@ -57,8 +57,8 @@
 
 			</div>
 
-		<@liferay_portlet["runtime"] portletProviderAction=VIEW portletProviderClassName="com.liferay.asset.publisher.web.portlet.AssetPublisherPortlet" />
-
+<#-- <@liferay_portlet["runtime"] portletName="com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_ANK6IB2MWewK" />
+ -->
 	</header>
 
 	<section id="content">

@@ -63,9 +63,9 @@ function hideHeadingScroll() {
 		console.log(scrollTop);
 
 		if( scrollTop <= headerThreshold && banner.width() >= 768) {
-			banner.removeClass('lower-position');
+			banner.removeClass('lower-position').addClass('higher-position');
 		}else {
-			banner.addClass('lower-position');
+			banner.removeClass('higher-position').addClass('lower-position');
 		}
 
 		if (Math.abs(lastScrollTop - scrollTop) > delta) {

@@ -9,15 +9,15 @@ $grey: #D1D1D1;
 			padding: 30px;
 		}
 
-		#column-1 {
-			.portlet-content {
-				visibility: hidden;
+		// #column-1 {
+		// 	.portlet-content {
+		// 		visibility: hidden;
 			
-				img {
-					visibility: visible;
-				}
-			}	
-		}
+		// 		img {
+		// 			visibility: visible;
+		// 		}
+		// 	}	
+		// }
 
 		#column-6, #column-9 {
 			@media (min-width: $screen-sm-min) {
