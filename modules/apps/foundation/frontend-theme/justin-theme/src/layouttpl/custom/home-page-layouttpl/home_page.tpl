@@ -2,7 +2,7 @@
 	<div class="portlet-layout row">
 		<div class="col-md-12 portlet-column portlet-column-only" id="column-1">
 			$processor.processColumn("column-1", "portlet-column-content portlet-column-content-only")
-			$processor.processPortlet("com.liferay.portal.kernel.servlet.taglib.ui.BreadcrumbEntry", $portletProviderAction.VIEW)
+			$processor.processPortlet("com.liferay.currency.converter.web.internal.portlet.CurrencyConverterPortlet", $portletProviderAction.ADD)
 		</div>
 	</div>
 	<div class="portlet-layout row">
@@ -10,11 +10,15 @@
 			<div class="portlet-layout row">
 				<div class="col-md-12 portlet-column portlet-column-only" id="column-3">
 					$processor.processColumn("column-3", "portlet-column-content portlet-column-content-only")
+					$processor.processPortlet("com_liferay_journal_content_web_portlet_JournalContentPortlet", $portletProviderAction.VIEW)
+
 				</div>
 			</div>
 			<div class="portlet-layout row">
 				<div class="col-md-6 portlet-column portlet-column-first" id="column-4">
 					$processor.processColumn("column-4", "portlet-column-content portlet-column-content-first")
+					$processor.processPortlet("com.liferay.journal.content.web.portlet.JournalContentPortlet", $portletProviderAction.VIEW)
+
 				</div>
 				<div class="col-md-6 portlet-column portlet-column-first" id="column-5">
 					$processor.processColumn("column-5", "portlet-column-content portlet-column-content-last")

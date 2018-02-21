@@ -34,6 +34,10 @@
 					<template-path>/layouttpl/custom/home-page-layouttpl/home_page.tpl</template-path>
 					<thumbnail-path>/layouttpl/custom/home-page-layouttpl/home_page.png</thumbnail-path>
 				</layout-template>
+				<layout-template id="article" name="Article">
+					<template-path>/layouttpl/custom/article-layouttpl/article.tpl</template-path>
+					<thumbnail-path>/layouttpl/custom/article-layouttpl/article.png</thumbnail-path>
+				</layout-template>
 			</custom>
 		</layout-templates>
 	</theme>

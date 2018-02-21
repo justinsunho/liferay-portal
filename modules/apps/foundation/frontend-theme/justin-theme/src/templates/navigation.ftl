@@ -99,7 +99,7 @@
 														${nav_grand_child.getName()}
 													</a>
 												</p>
-											</li>						
+											</li>			
 										</#list>
 									</ul>
 								</li>

@@ -316,7 +316,7 @@ html {
 											ul.dropdown-menu {
 												display: block;
 												left: 100%;
-												//margin-top: -5%;
+												margin-top: -5%;
 												top: auto;
 											}
 										}
@@ -364,6 +364,12 @@ html {
 
 					i {
 						font-size: $base;
+					}
+				}
+
+				nav ul li ul li a span {
+					.icon-chevron-down.sub-menu.dropdown-md-icon, .icon-chevron-left.sub-menu.dropdown-md-icon {
+						display: none;
 					}
 				}
 			}

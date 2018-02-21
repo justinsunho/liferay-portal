@@ -61,6 +61,10 @@
 	<section id="content">
 		<h1 class="hide-accessible">${the_title}</h1>
 
+		<@liferay_portlet["runtime"] defaultPreferences="${freeMarkerPortletPreferences}" portletProviderAction=portletProviderAction.VIEW portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" />
+
+		<@liferay_portlet["runtime"] defaultPreferences="${freeMarkerPortletPreferences}" portletProviderAction=portletProviderAction.VIEW portletName="com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet" />
+
 		<#if selectable>
 			<@liferay_util["include"] page=content_include />
 		<#else>
