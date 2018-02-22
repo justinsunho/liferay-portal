@@ -131,6 +131,7 @@ html {
 		}
 
 		.higher-position {
+			transition: top 1s ease-in-out;
 			nav ul li { 
 				.nav-anchor, .nav-link {
 					color: #FFF;
@@ -149,7 +150,7 @@ html {
 			line-height: 1.5;
 			padding: 20px 7% 2px;
 			position: sticky;
-			transition: top 0.2s ease-in-out;
+			transition: top 0.3s ease-in-out;
 			width: 100%;
 			z-index: 6;
 
