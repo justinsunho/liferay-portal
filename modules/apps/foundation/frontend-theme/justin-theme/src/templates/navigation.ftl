@@ -68,8 +68,8 @@
 									<a aria-labelledby="layout_${nav_child.getLayoutId()}" class="nav-anchor" ${nav_child_attr_has_popup} href="${nav_child.getURL()}" ${nav_child.getTarget()} role="menuitem" tabindex="-1">
 										<span class="navItemSpan"><@liferay_theme["layout-icon"] layout=nav_item_layout />
 											${nav_child.getName()}
-											<i class="icon-chevron-left sub-menu dropdown-md-icon"></i>
-											<i class="icon-chevron-down sub-menu dropdown-md-icon"></i>
+											<i class="dropdown-md-icon icon-chevron-left sub-menu"></i>
+											<i class="dropdown-md-icon icon-chevron-down sub-menu"></i>
 										</span>
 										<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button">
 											<span class="sub-Icon">
