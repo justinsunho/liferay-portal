@@ -149,7 +149,7 @@ html {
 			font-family: Montserrat, Helvetica, sans serif;
 			line-height: 1.5;
 			padding: 20px 7% 2px;
-			position: sticky;
+			position: fixed;
 			transition: top 0.3s ease-in-out;
 			width: 100%;
 			z-index: 6;
@@ -395,7 +395,7 @@ html {
 			display: block;
 			margin: auto;
 			padding: 0 5%;
-			//padding-top: 2.5%;
+		//	padding-top: 2.5%;
 			width: 95%;
 
 			h1, h2, h3, h4, h5, h6 {
@@ -475,11 +475,11 @@ html {
 			}
 
 			@media (max-width: $screen-sm-max) {
-				//padding-top: 130px;
+	//			padding-top: 130px;
 			}
 
 			@media (max-width: $screen-xs-max) {
-				//padding-top: 140px;
+				padding-top: 70px;
 			}
 		}
 

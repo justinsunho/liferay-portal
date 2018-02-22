@@ -56,9 +56,6 @@
 				</#if>
 
 			</div>
-
-<#-- <@liferay_portlet["runtime"] portletName="com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_ANK6IB2MWewK" />
- -->
 	</header>
 
 	<section id="content">
