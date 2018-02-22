@@ -1,4 +1,4 @@
-$videoBlack: #323232;
+$borderBlck: #202020;
 $grey: #D1D1D1;
 
 .home-page {
@@ -8,7 +8,7 @@ $grey: #D1D1D1;
 		.portlet-dropzone {
 			padding: 0;
 		}
-
+		
 		#column-1 {
 			.portlet-journal-content .portlet .portlet-content {
 				.portlet-content-container {
@@ -31,6 +31,10 @@ $grey: #D1D1D1;
 				border-radius: 0 0 4px 4px;
 				top: auto;
 			}
+		}
+
+		.portlet-column {
+			padding: 30px;
 		}
 
 		#column-6, #column-9 {
