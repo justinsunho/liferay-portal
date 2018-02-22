@@ -132,9 +132,11 @@ html {
 
 		.higher-position {
 
-			nav ul li { 
-				.nav-anchor, .nav-link {
-					color: #FFF;
+			@media (min-width: $screen-sm-min) {
+				nav ul li { 
+					.nav-anchor, .nav-link {
+						color: #FFF;
+					}
 				}
 			}
 		}
@@ -149,7 +151,7 @@ html {
 			font-family: Montserrat, Helvetica, sans serif;
 			line-height: 1.5;
 			padding: 20px 7% 2px;
-			position: sticky;
+			position: fixed;
 			transition: top 0.3s ease-in-out;
 			width: 100%;
 			z-index: 6;
