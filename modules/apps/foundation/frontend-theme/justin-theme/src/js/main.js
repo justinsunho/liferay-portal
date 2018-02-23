@@ -25,8 +25,9 @@ Liferay.on(
 );
 
 function hideHeadingScroll() {
-	var delta = 40;
 	var banner = $('#banner');
+	var delta = 40;
+	var headerThreshold = 300;
 	var lastScrollTop = 0;
 	var navbarCollapse = $('.navbar-collapse');
 	var navbarHeight = banner.outerHeight();
@@ -34,9 +35,6 @@ function hideHeadingScroll() {
 	var navbarToggle = $('.navbar-toggle');
 	var scrolling;
 	var ulDropdown = $('ul.dropdown-menu [data-toggle=dropdown]');
-
-	var headerThreshold = 300;
-	var screenSm = 768;
 
 	$(window).scroll(
 		function(e) {
@@ -55,18 +53,20 @@ function hideHeadingScroll() {
 		250
 	);
 
+	if($('#column-1 .portlet-content').find('img').length == 0) {
+		$('#column-1').css('padding', '20%');
+		banner.addClass('lower-position').removeClass('higher-position');
+	}
+
 	function moveBar() {
 		var scrollTop = $(this).scrollTop();
 
-		var controlMenuHeight = $('.control-menu').height();
-
-		console.log(scrollTop);
-
-		if( scrollTop < headerThreshold && banner.width() > 768) {
+		if( scrollTop < headerThreshold) {
 			banner.removeClass('lower-position').addClass('higher-position');
 		
-		}else if(banner.hasClass('higher-position')){
+		} else if(banner.hasClass('higher-position')) {
 			banner.removeClass('higher-position').addClass('lower-position');
+		
 		}
 
 		if (Math.abs(lastScrollTop - scrollTop) > delta) {

@@ -126,15 +126,17 @@ html {
 		}
 
 		.lower-position {
+			nav ul li {
+				color: #000;
+			}
 			background-color: #FFF;
 			box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
 		}
 
 		.higher-position {
-
-			@media (min-width: $screen-sm-min) {
-				nav ul li { 
-					.nav-anchor, .nav-link {
+			nav ul li {
+				.nav-anchor, .nav-link {
+					@media (min-width: $screen-sm-min) {
 						color: #FFF;
 					}
 				}
@@ -343,16 +345,24 @@ html {
 				}
 			}
 
-			@media (max-width: $screen-md-max) {				
-				.navbar-header span {
-					font-size: $base + 12pt;
-				}
-
-				#navigation ul li ul li {
-					ul li a {
-						margin-left: 15%;
+			@media (max-width: $screen-md-max) {
+				.navbar-header { 
+					span {
+						font-size: $base + 8pt;
 					}
 				}
+
+				#navigation ul li {
+					a span.navItemSpan {
+						font-size: 1.25vw;
+					}
+
+					ul li {
+						ul li a {
+							margin-left: 15%;
+						}
+					}
+				}	
 			}
 
 			@media (max-width: $screen-xs-max) {
@@ -373,9 +383,13 @@ html {
 					font-size: $base + 12pt;
 				}
 
-				nav ul li a {
+				#navigation ul li a {
 					&[aria-expanded='false'] .icon-chevron-down, &[aria-expanded='true'] .icon-chevron-left {
 						display: none;
+					}
+
+					span.navItemSpan {
+						font-size: $base;
 					}
 
 					i {
@@ -397,7 +411,6 @@ html {
 			display: block;
 			margin: auto;
 			padding: 0 5%;
-		//	padding-top: 2.5%;
 			width: 95%;
 
 			h1, h2, h3, h4, h5, h6 {
@@ -476,8 +489,8 @@ html {
 				font-style: italic;
 			}
 
-			@media (max-width: $screen-sm-max) {
-	//			padding-top: 130px;
+			.portlet-login {
+				padding-top: 300px;
 			}
 
 			@media (max-width: $screen-xs-max) {
