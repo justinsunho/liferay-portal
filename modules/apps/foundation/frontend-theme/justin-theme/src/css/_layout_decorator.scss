@@ -1,5 +1,5 @@
 $borderBlck: #202020;
-$grey: #D1D1D1;
+$grey: #EFEFEF;
 
 %grey-background {
 	background-color: $grey;
@@ -77,7 +77,7 @@ $grey: #D1D1D1;
 
 .article {
 	.row {
-		.portlet-dropdzone {
+		.portlet-dropzone {
 			padding: 0;
 		}
 

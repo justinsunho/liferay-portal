@@ -126,7 +126,7 @@ html {
 		}
 
 		.lower-position {
-			nav ul li {
+			div #heading p, nav ul li {
 				color: #000;
 			}
 			background-color: #FFF;
@@ -134,6 +134,10 @@ html {
 		}
 
 		.higher-position {
+			div #heading p {
+				color: #FFF;
+			}
+			
 			nav ul li {
 				.nav-anchor, .nav-link {
 					@media (min-width: $screen-sm-min) {
