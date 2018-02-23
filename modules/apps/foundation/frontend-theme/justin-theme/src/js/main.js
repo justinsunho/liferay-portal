@@ -61,12 +61,11 @@ function hideHeadingScroll() {
 	function moveBar() {
 		var scrollTop = $(this).scrollTop();
 
-		if( scrollTop < headerThreshold) {
+		if( scrollTop < headerThreshold && $('#content').find('.category').length == 0 ) {
 			banner.removeClass('lower-position').addClass('higher-position');
 		
-		} else if(banner.hasClass('higher-position')) {
+		} else if(banner.hasClass('higher-position') ) {
 			banner.removeClass('higher-position').addClass('lower-position');
-		
 		}
 
 		if (Math.abs(lastScrollTop - scrollTop) > delta) {

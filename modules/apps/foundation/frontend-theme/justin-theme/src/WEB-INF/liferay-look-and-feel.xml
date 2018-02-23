@@ -38,6 +38,10 @@
 					<template-path>/layouttpl/custom/article-layouttpl/article.tpl</template-path>
 					<thumbnail-path>/layouttpl/custom/article-layouttpl/article.png</thumbnail-path>
 				</layout-template>
+				<layout-template id="category" name="category">
+					<template-path>/layouttpl/custom/category-layouttpl/category.tpl</template-path>
+					<thumbnail-path>/layouttpl/custom/category-layouttpl/category.png</thumbnail-path>
+				</layout-template>
 			</custom>
 		</layout-templates>
 	</theme>
