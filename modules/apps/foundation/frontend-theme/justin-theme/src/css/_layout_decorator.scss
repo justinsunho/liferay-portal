@@ -1,4 +1,4 @@
-$borderBlck: #202020;
+$borderBlack: #202020;
 $grey: #EFEFEF;
 
 %grey-background {
@@ -43,7 +43,7 @@ $grey: #EFEFEF;
 .home-page {
 	.row {
 		.portlet-dropzone {
-			padding: 0;
+			padding: 10;
 		}
 
 		#column-1 {
@@ -65,9 +65,13 @@ $grey: #EFEFEF;
 	}
 
 	.video-row {
-		background-color: #202020;
+		background-color: $borderBlack;
 		margin: 0 -10% -10%;
 		padding: 2.5% 10% 15%;
+
+		.portlet-column {
+			background-color: $borderBlack;
+		}
 	}
 
 	.grey-row {
@@ -78,7 +82,7 @@ $grey: #EFEFEF;
 .article {
 	.row {
 		.portlet-dropzone {
-			padding: 0;
+			padding: 10;
 		}
 
 		#column-1 {
@@ -104,7 +108,7 @@ $grey: #EFEFEF;
 .category {
 	.row {
 		.portlet-dropzone {
-			padding: 0;
+			padding: 10;
 		}
 
 		.portlet-column {
