@@ -5,7 +5,7 @@
             "columns": [
                 [
                     {
-                        "portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet",
+                        "portletId": "56",
                         "portletPreferences": {
                             "articleId": "banner.xml",
                             "groupId": "${groupId}"
@@ -13,7 +13,13 @@
                     }
                 ],
                 [
-                    "article preview.xml"
+                    {
+                        "portletId": "56",
+                        "portletPreferences": {
+                            "articleId": "banner article preview.xml",
+                            "groupId": "${groupId}"
+                        }
+                    }
                 ],
                 [
                     {
