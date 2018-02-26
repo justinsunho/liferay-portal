@@ -1,24 +1,14 @@
 {
-    "layoutTemplateId": "home_page",
+    "layoutTemplateId": "home-page",
     "publicPages": [
         {
             "columns": [
                 [
-                    {
-                        "portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet",
-                        "portletPreferences": {
-                            "articleId": "banner.xml",
-                            "groupId": "${groupId}"
-                        }
-                    }
-                ],
-                [
-                    {
-                        "portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet"
-                    }
+                    "banner.xml"
                 ]
             ],
             "friendlyURL": "/home",
+            "layoutTemplateId": "home-page",
             "name": "Welcome",
             "title": "Welcome"
         },
