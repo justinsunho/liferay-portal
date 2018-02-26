@@ -57,7 +57,6 @@ function hideHeadingScroll() {
 		var scrollTop = $(this).scrollTop();
 
 		if($('#column-1 .portlet-content').find('img').length == 0) {
-			console.log('justin');
 			$('#column-1').css('padding', '20%');
 			banner.addClass('lower-position').removeClass('higher-position');
 		}else {

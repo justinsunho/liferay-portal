@@ -4,8 +4,65 @@
         {
             "columns": [
                 [
-                    "banner.xml"
-                ]
+                    {
+                        "portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet",
+                        "portletPreferences": {
+                            "articleId": "banner.xml",
+                            "groupId": "${groupId}"
+                        } 
+                    }
+                ],
+                [
+                    "article preview.xml"
+                ],
+                [
+                    {
+                        "portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet"
+                    }
+                ],
+                [
+                    {
+                        "portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet"
+                    }
+                ],
+                [
+                    {
+                        "portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet"
+                    }
+                ],
+                [
+                    {
+                        "portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet"
+                    }
+                ],
+                [
+                    {
+                        "portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet"
+                    }
+                ],
+                [
+                    {
+                        "portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet"
+                    }
+                ],
+                [
+                    {
+                        "portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet"
+                    }
+                ],
+                [
+                    {
+                        "portletId": "com_liferay_youtube_web_portlet_YouTubePortlet",
+                        "portletPreferences": {
+                            "url": "https://www.youtube.com/watch?v=wU9M8-qpWbQ"
+                        }
+                    }
+                ],
+                [
+                    {
+                        "portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet"
+                    }
+                ],
             ],
             "friendlyURL": "/home",
             "layoutTemplateId": "home-page",
@@ -15,9 +72,7 @@
         {
             "columns": [
                 [
-                    {
-                        "portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet",
-                    }
+                    "banner.xml"
                 ]
             ],
             "friendlyURL": "/Article",
