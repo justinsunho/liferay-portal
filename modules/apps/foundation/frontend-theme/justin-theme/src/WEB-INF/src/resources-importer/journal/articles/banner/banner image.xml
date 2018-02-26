@@ -4,8 +4,8 @@
 	<dynamic-element index="0" index-type="keyword" name="content" type="text_area">
 		<dynamic-content language-id="en_US">
 			<![CDATA[
-				<div class="banner-image">
-					<img class="banner-picture" src="[$FILE=article_photo_1.jpg$]" />
+				<div class="banner-image-wrapper">
+					<img class="banner-picture" src="[$FILE=articlephoto1.jpg$]" alt="banner-image"/>
 				</div>
 			]]>
 		</dynamic-content>

@@ -40,88 +40,92 @@ $grey: #EFEFEF;
 	}
 }
 
-.home-page {
-	.row {
-		// .portlet-dropzone {
-		// 	padding: 10;
-		// }
+#content{
+	.home-page {
+		.row {
+			.portlet-dropzone {
+				padding: 10;
+			}
 
-		#column-1 {
-			@extend %image-only;
+			#column-1 {
+				padding: 0;
 
-			.portlet-topper {
-				border-radius: 0 0 4px 4px;
-				top: auto;
+				@extend %image-only;
+
+				.portlet-topper {
+					border-radius: 0 0 4px 4px;
+					top: auto;
+				}
+			}
+
+			.portlet-column {
+				margin-bottom: 30px;
+			}
+
+			#column-6, #column-9 {
+				@extend %grey-border;
 			}
 		}
 
-		// .portlet-column {
-		// 	margin-bottom: 30px;
-		// }
-
-		#column-6, #column-9 {
-			@extend %grey-border;
-		}
-	}
-
-	.video-row {
-		background-color: $borderBlack;
-		margin: 0 -10% -10%;
-		padding: 2.5% 10% 15%;
-
-		.portlet-column {
+		.video-row {
 			background-color: $borderBlack;
-		}
-	}
+			margin: 0 -10% -10%;
+			padding: 2.5% 10% 15%;
 
-	.grey-row {
-		@extend %grey-background;
-	}
-}
-
-.article {
-	.row {
-		.portlet-dropzone {
-			padding: 10;
-		}
-
-		#column-1 {
-			@extend %image-only;
-
-			.portlet-topper {
-				border-radius: 0 0 4px 4px;
-				top: auto;
+			.portlet-column {
+				background-color: $borderBlack;
 			}
 		}
 
-		.portlet-column {
+		.grey-row {
+			@extend %grey-background;
+		}
+	}
+
+	.article {
+		.row {
+			.portlet-dropzone {
+				padding: 10;
+			}
+
+			#column-1 {
+				@extend %image-only;
+
+				.portlet-topper {
+					border-radius: 0 0 4px 4px;
+					top: auto;
+				}
+			}
+
+			.portlet-column {
+				margin-bottom: 30px;
+				padding: 30px;
+			}
+		}
+
+		.grey-row {
+			@extend %grey-background;
+		}
+	}
+
+	.category {
+		.row {
+			.portlet-dropzone {
+				padding: 10;
+			}
+
+			.portlet-column {
+				margin-bottom: 30px;
+			}
+
+			#column-3 {
+				@extend %grey-border;
+			}
+		}
+
+		.grey-row {
+			@extend %grey-background;
 			margin-bottom: 30px;
-			padding: 30px;
 		}
-	}
-
-	.grey-row {
-		@extend %grey-background;
-	}
-}
-
-.category {
-	.row {
-		.portlet-dropzone {
-			padding: 10;
-		}
-
-		.portlet-column {
-			margin-bottom: 30px;
-		}
-
-		#column-3 {
-			@extend %grey-border;
-		}
-	}
-
-	.grey-row {
-		@extend %grey-background;
-		margin-bottom: 30px;
 	}
 }
