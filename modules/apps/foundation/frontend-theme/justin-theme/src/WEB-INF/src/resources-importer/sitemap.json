@@ -1,0 +1,15 @@
+{
+    "layoutTemplateId": "home_page",
+    "publicPages": [
+        {
+            "columns": [
+                [
+                   "banner.xml"
+                ]
+            ],
+            "friendlyURL": "/home",
+            "name": "Welcome",
+            "title": "Welcome"
+        }
+    ]
+}
