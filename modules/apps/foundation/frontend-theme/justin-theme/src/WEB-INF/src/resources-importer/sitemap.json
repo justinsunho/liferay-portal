@@ -5,17 +5,22 @@
             "columns": [
                 [
                     {
-                        "portletId": " com_liferay_journal_content_web_portlet_JournalContentPortlet",
+                        "portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet",
                         "portletPreferences": {
                             "articleId": "banner.xml",
                             "groupId": "${groupId}"
                         }
+                    }
+                ],
+                [
+                    {
+                        "portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet"
                     }
                 ]
             ],
             "friendlyURL": "/home",
             "name": "Welcome",
             "title": "Welcome"
-        }
+        },
     ]
 }
