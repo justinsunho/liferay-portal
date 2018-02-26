@@ -7,7 +7,7 @@
                     {
                         "portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet",
                         "portletPreferences": {
-                            "articleId": "banner.xml",
+                            "articleId": "banner image.xml",
                             "groupId": "${groupId}"
                         }
                     }
