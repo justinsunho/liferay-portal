@@ -53,13 +53,16 @@ function hideHeadingScroll() {
 		250
 	);
 
-	if($('#column-1 .portlet-content').find('img').length == 0) {
-		$('#column-1').css('padding', '20%');
-		banner.addClass('lower-position').removeClass('higher-position');
-	}
-
 	function moveBar() {
 		var scrollTop = $(this).scrollTop();
+
+		if($('#column-1 .portlet-content').find('img').length == 0) {
+			console.log('justin');
+			$('#column-1').css('padding', '20%');
+			banner.addClass('lower-position').removeClass('higher-position');
+		}else {
+			$('#column-1').css('padding', '0');
+		}
 
 		if( scrollTop < headerThreshold && $('#content').find('.category').length == 0 ) {
 			banner.removeClass('lower-position').addClass('higher-position');
