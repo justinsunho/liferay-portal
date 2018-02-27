@@ -92,17 +92,6 @@
             "columns": [
                 [
                     "banner.xml"
-                ]
-            ],
-            "friendlyURL": "/Article",
-            "layoutTemplateId": "article",
-            "name": "Article",
-            "title": "Article"
-        },
-        {
-            "columns": [
-                [
-                    "banner.xml"
                 ],
                 [
                     "author info.xml"
@@ -114,6 +103,17 @@
                     "video preview.xml",
                     "video preview.xml",
                     "video preview.xml"
+                ]
+            ],
+            "friendlyURL": "/Article",
+            "layoutTemplateId": "article",
+            "name": "Article",
+            "title": "Article"
+        },
+        {
+            "columns": [
+                [
+                    "banner.xml"
                 ]
             ],
             "friendlyURL": "/Category",
