@@ -4,14 +4,6 @@
 	<dynamic-element index="0" index-type="keyword" name="content" type="text_area">
 		<dynamic-content language-id="en_US">
 			<![CDATA[
-				<style type="text/css">
-					.portlet-journal-content .portlet-content {
-						padding: 0;
-					}
-					.portlet-journal-content img {
-						width: 100%;
-					}
-				</style>
 				<div class="preview text">
 					<h2>Is Quantum Computing Viable? </h2>
 					<p>

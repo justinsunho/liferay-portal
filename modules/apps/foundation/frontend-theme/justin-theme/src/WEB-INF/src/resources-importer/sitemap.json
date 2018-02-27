@@ -4,32 +4,16 @@
         {
             "columns": [
                 [
-                    {
-                        "portletId": "56",
-                        "portletPreferences": {
-                            "articleId": "banner.xml",
-                            "groupId": "${groupId}"
-                        } 
-                    }
+                    "banner.xml"
                 ],
                 [
-                    {
-                        "portletId": "56",
-                        "portletPreferences": {
-                            "articleId": "banner article preview.xml",
-                            "groupId": "${groupId}"
-                        }
-                    }
+                    "banner preview.xml"
                 ],
                 [
-                    {
-                        "portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet"
-                    }
+                    "article preview.xml"
                 ],
                 [
-                    {
-                        "portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet"
-                    }
+                    "author info.xml"
                 ],
                 [
                     {

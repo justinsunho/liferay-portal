@@ -1,3 +1,1 @@
-<div>
-	${content.getData()}
-</div>
+${content.getData()}
