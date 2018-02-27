@@ -13,11 +13,11 @@
                     "article preview.xml"
                 ],
                 [
-                    "author info.xml"
+                    "article preview.xml"
                 ],
                 [
                     {
-                        "portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet"
+                        "portletId": "com_liferay_google_maps_web_portlet_GoogleMapsPortlet"
                     }
                 ],
                 [

@@ -8,7 +8,7 @@
 					.article-photo {
 						float: left;
 						max-width: 400px;
-						padding-right: 20px;
+						padding-bottom: 20px;
 					}
 				</style>
 
