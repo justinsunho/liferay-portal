@@ -7,7 +7,10 @@
                     "banner.xml"
                 ],
                 [
-                    "banner preview.xml"
+                    "full article preview.xml"
+                ],
+                [
+                    "banner article.xml"
                 ],
                 [
                     "article preview.xml"
@@ -17,18 +20,14 @@
                 ],
                 [
                     {
-                        "portletId": "com_liferay_google_maps_web_portlet_GoogleMapsPortlet"
+                        "portletId": "com_liferay_google_maps_web_portlet_GoogleMapsPortlet",
+                        "portletPreferences": {
+                            "mapAddress": "1400 Montefino Ave, Diamond Bar, CA 91765"
+                        }
                     }
                 ],
                 [
-                    {
-                        "portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet"
-                    }
-                ],
-                [
-                    {
-                        "portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet"
-                    }
+                    "full article preview.xml"
                 ],
                 [
                     {
@@ -50,9 +49,57 @@
                 ],
                 [
                     {
-                        "portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet"
+                        "portletId": "com_liferay_youtube_web_portlet_YouTubePortlet",
+                        "portletPreferences": {
+                            "url": "https://www.youtube.com/watch?v=wU9M8-qpWbQ"
+                        }
+                    },
+                    {
+                        "portletId": "com_liferay_youtube_web_portlet_YouTubePortlet",
+                        "portletPreferences": {
+                            "url": "https://www.youtube.com/watch?v=wU9M8-qpWbQ"
+                        }
+                    },
+                    {
+                        "portletId": "com_liferay_youtube_web_portlet_YouTubePortlet",
+                        "portletPreferences": {
+                            "url": "https://www.youtube.com/watch?v=wU9M8-qpWbQ"
+                        }
                     }
                 ],
+                [
+                    "article preview.xml"
+                ],
+                [
+                    "article preview.xml"
+                ],
+                [
+                    "article preview.xml"
+                ],
+                [
+                    {
+                        "portletId": "com_liferay_youtube_web_portlet_YouTubePortlet",
+                        "portletPreferences": {
+                            "url": "https://www.youtube.com/watch?v=wU9M8-qpWbQ"
+                        }
+                    }
+                ],
+                [
+                    {
+                        "portletId": "com_liferay_youtube_web_portlet_YouTubePortlet",
+                        "portletPreferences": {
+                            "url": "https://www.youtube.com/watch?v=wU9M8-qpWbQ"
+                        }
+                    }
+                ],
+                [
+                    {
+                        "portletId": "com_liferay_youtube_web_portlet_YouTubePortlet",
+                        "portletPreferences": {
+                            "url": "https://www.youtube.com/watch?v=wU9M8-qpWbQ"
+                        }
+                    }
+                ]
             ],
             "friendlyURL": "/home",
             "layoutTemplateId": "home-page",
@@ -69,6 +116,36 @@
             "layoutTemplateId": "article",
             "name": "Article",
             "title": "Article"
+        },
+        {
+            "columns": [
+                [
+                    "banner.xml"
+                ]
+            ],
+            "friendlyURL": "/Category",
+            "layouts": [
+                {
+                    "friendlyURL": "/Subjects",
+                    "layouts": [
+                        {
+                            "friendlyURL": "Mathematics",
+                            "name": "Mathematics",
+                            "title": "Mathematics"
+                        }
+                    ],
+                    "name": "subjects",
+                    "title":"subjects"
+                },
+                {
+                    "friendlyURL": "/Authors",
+                    "name": "Authors",
+                    "title": "Authors"
+                }
+            ],
+            "layoutTemplateId": "category",
+            "name": "Category",
+            "title": "Category"
         }
     ]
 }
