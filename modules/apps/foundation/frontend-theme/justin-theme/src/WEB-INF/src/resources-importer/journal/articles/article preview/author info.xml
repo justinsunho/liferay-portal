@@ -6,14 +6,14 @@
 			<![CDATA[
 				<style type="text/css">
 					#author-photo {
-						display: block;
 						border-radius: 50%;
+						display: block;
 						max-width: 150px;
 						padding: 20px;
 					}
 				</style>
 				
-				<img id="author-photo" src="[$FILE=author_photo_1.jpg$]" alt="author photo" />
+				<img alt="author photo" id="author-photo" src="[$FILE=author_photo_1.jpg$]" />
 			]]>
 		</dynamic-content>
 	</dynamic-element>

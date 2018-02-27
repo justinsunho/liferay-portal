@@ -10,7 +10,7 @@
 						width: 100%
 					}
 				</style>
-				<img class="full-article-preview-img" src="[$FILE=article_photo_3.jpg$]" alt="article photo" />
+				<img alt="article photo" class="full-article-preview-img" src="[$FILE=article_photo_3.jpg$]" />
 			]]>
 		</dynamic-content>
 	</dynamic-element>

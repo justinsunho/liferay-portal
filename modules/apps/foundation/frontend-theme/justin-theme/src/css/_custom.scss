@@ -137,7 +137,7 @@ html {
 			div #heading p {
 				color: #FFF;
 			}
-			
+
 			nav ul li {
 				.nav-anchor, .nav-link {
 					@media (min-width: $screen-sm-min) {
@@ -350,7 +350,7 @@ html {
 			}
 
 			@media (max-width: $screen-md-max) {
-				.navbar-header { 
+				.navbar-header {
 					span {
 						font-size: $base + 8pt;
 					}
@@ -366,7 +366,7 @@ html {
 							margin-left: 15%;
 						}
 					}
-				}	
+				}
 			}
 
 			@media (max-width: $screen-xs-max) {

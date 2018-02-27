@@ -25,8 +25,8 @@
 				<style type="text/css">
 					.video-preview-text {
 						color: #DCDCDC;
-						font-size: 12pt;
 						float: right;
+						font-size: 12pt;
 					}
 				</style>
 				<p class="video-preview-text">Smart Swarms Seek New Ways to Cooperate</p>
