@@ -48,24 +48,9 @@
                     }
                 ],
                 [
-                    {
-                        "portletId": "com_liferay_youtube_web_portlet_YouTubePortlet",
-                        "portletPreferences": {
-                            "url": "https://www.youtube.com/watch?v=wU9M8-qpWbQ"
-                        }
-                    },
-                    {
-                        "portletId": "com_liferay_youtube_web_portlet_YouTubePortlet",
-                        "portletPreferences": {
-                            "url": "https://www.youtube.com/watch?v=wU9M8-qpWbQ"
-                        }
-                    },
-                    {
-                        "portletId": "com_liferay_youtube_web_portlet_YouTubePortlet",
-                        "portletPreferences": {
-                            "url": "https://www.youtube.com/watch?v=wU9M8-qpWbQ"
-                        }
-                    }
+                    "article preview.xml",
+                    "article preview.xml",
+                    "article preview.xml"
                 ],
                 [
                     "article preview.xml"
@@ -77,27 +62,11 @@
                     "article preview.xml"
                 ],
                 [
-                    {
-                        "portletId": "com_liferay_youtube_web_portlet_YouTubePortlet",
-                        "portletPreferences": {
-                            "url": "https://www.youtube.com/watch?v=wU9M8-qpWbQ"
-                        }
-                    }
+                    "full article preview.xml"
                 ],
                 [
                     {
-                        "portletId": "com_liferay_youtube_web_portlet_YouTubePortlet",
-                        "portletPreferences": {
-                            "url": "https://www.youtube.com/watch?v=wU9M8-qpWbQ"
-                        }
-                    }
-                ],
-                [
-                    {
-                        "portletId": "com_liferay_youtube_web_portlet_YouTubePortlet",
-                        "portletPreferences": {
-                            "url": "https://www.youtube.com/watch?v=wU9M8-qpWbQ"
-                        }
+                        "portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet",
                     }
                 ]
             ],
