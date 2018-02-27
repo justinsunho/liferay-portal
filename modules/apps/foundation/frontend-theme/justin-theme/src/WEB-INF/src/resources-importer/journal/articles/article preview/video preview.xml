@@ -6,27 +6,36 @@
 			<![CDATA[
 				<style type="text/css">
 					.article-photo {
-						border-radius: 50%;
-						max-width: 400px;
+						max-width: 100px;
 						padding-right: 20px;
 					}
+
+					.article-image {
+						float: left;
+					}
 				</style>
-				
-				<img src="[$FILE=author_photo_1.jpg$]" alt="author photo" />
+
+				<img class="article-photo" src="[$FILE=article_photo_4.jpg$]" alt="article photo" />
 			]]>
 		</dynamic-content>
 	</dynamic-element>
 	<dynamic-element index="0" index-type="keyword" name="title" type="text_area">
 		<dynamic-content language-id="en_US">
 			<![CDATA[
-				Katia Moskvitch
+				<style type="text/css">
+					.video-preview-text {
+						color: #DCDCDC;
+						font-size: 12pt;
+						float: right;
+					}
+				</style>
+				<p class="video-preview-text">Smart Swarms Seek New Ways to Cooperate</p>
 			]]>
 		</dynamic-content>
 	</dynamic-element>
 	<dynamic-element index="0" index-type="keyword" name="content" type="text_area">
 		<dynamic-content language-id="en_US">
 			<![CDATA[
-				Contributing Writer. UCLA graduate. 
 			]]>
 		</dynamic-content>
 	</dynamic-element>

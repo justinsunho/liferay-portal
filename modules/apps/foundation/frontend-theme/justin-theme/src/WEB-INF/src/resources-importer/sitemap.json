@@ -24,20 +24,30 @@
                         "portletPreferences": {
                             "mapAddress": "1400 Montefino Ave, Diamond Bar, CA 91765"
                         }
+                    },
+                    {
+                        "portletId": "com_liferay_google_maps_web_portlet_GoogleMapsPortlet",
+                        "portletPreferences": {
+                            "mapAddress": "1400 Montefino Ave, Diamond Bar, CA 91765"
+                        }
+                    },
+                    {
+                        "portletId": "com_liferay_google_maps_web_portlet_GoogleMapsPortlet",
+                        "portletPreferences": {
+                            "mapAddress": "1400 Montefino Ave, Diamond Bar, CA 91765"
+                        }
                     }
                 ],
                 [
                     "full article preview.xml"
                 ],
                 [
-                    {
-                        "portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet"
-                    }
+                    "article preview.xml",
                 ],
                 [
-                    {
-                        "portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet"
-                    }
+                    "video preview.xml",
+                    "video preview.xml",
+                    "video preview.xml"
                 ],
                 [
                     {
@@ -48,9 +58,8 @@
                     }
                 ],
                 [
-                    "article preview.xml",
-                    "article preview.xml",
-                    "article preview.xml"
+                    "video preview.xml",
+                    "video preview.xml",
                 ],
                 [
                     "article preview.xml"
@@ -66,7 +75,11 @@
                 ],
                 [
                     {
-                        "portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet",
+                        "portletId": "com_liferay_dynamic_data_lists_form_web_portlet_DDLFormPortlet",
+                        "portletPreferences": {
+                            "title": "Join our Email list",
+                            "fieldLabel": "Email"
+                        }
                     }
                 ]
             ],
@@ -90,6 +103,17 @@
             "columns": [
                 [
                     "banner.xml"
+                ],
+                [
+                    "author info.xml"
+                ],
+                [
+                    "article.xml"
+                ],
+                [
+                    "video preview.xml",
+                    "video preview.xml",
+                    "video preview.xml"
                 ]
             ],
             "friendlyURL": "/Category",
