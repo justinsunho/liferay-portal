@@ -103,6 +103,27 @@
                     "video preview.xml",
                     "video preview.xml",
                     "video preview.xml"
+                ],
+                [
+                    {
+                        "portletId": "com_liferay_dynamic_data_lists_form_web_portlet_DDLFormPortlet",
+                        "portletPreferences": {
+                            "title": "Join our Email list",
+                            "fieldLabel": "Email"
+                        }
+                    }
+                ],
+                [
+                    "article preview.xml",
+                ],
+                [
+                    "article preview.xml",
+                ],
+                [
+                    "article preview.xml",
+                ],
+                [
+                    "full article preview.xml"
                 ]
             ],
             "friendlyURL": "/Article",
@@ -113,32 +134,111 @@
         {
             "columns": [
                 [
-                    "banner.xml"
+                    "subject info.xml"
+                ],
+                [
+                    "article preview.xml",
+                ],
+                [
+                    "video preview.xml",
+                    "video preview.xml",
+                    "video preview.xml"
+                ],
+                [
+                    "full article preview.xml"
+                ],
+                [
+                    "article preview.xml",
+                ],
+                [
+                    {
+                        "portletId": "com_liferay_dynamic_data_lists_form_web_portlet_DDLFormPortlet",
+                        "portletPreferences": {
+                            "title": "Join our Email list",
+                            "fieldLabel": "Email"
+                        }
+                    }
                 ]
             ],
-            "friendlyURL": "/Category",
+            "friendlyURL": "/Mathematics",
             "layouts": [
                 {
-                    "friendlyURL": "/Subjects",
-                    "layouts": [
-                        {
-                            "friendlyURL": "Mathematics",
-                            "name": "Mathematics",
-                            "title": "Mathematics"
-                        }
-                    ],
-                    "name": "subjects",
-                    "title":"subjects"
+                    "friendlyURL": "/Graph",
+                    "name": "Graph",
+                    "title":"Graph"
                 },
                 {
-                    "friendlyURL": "/Authors",
-                    "name": "Authors",
-                    "title": "Authors"
+                    "friendlyURL": "/Analysis",
+                    "name": "Analysis",
+                    "title": "Analysis"
                 }
             ],
             "layoutTemplateId": "category",
             "name": "Category",
             "title": "Category"
+        },
+        {
+            "columns":[
+                [
+                    "author info.xml"
+                ],
+                [
+                    "article preview.xml",
+                    "article preview.xml"
+                ],
+                [
+                    "video preview.xml",
+                    "video preview.xml"
+                ],
+                [
+                    "full article preview.xml"
+                ],
+                [
+                    "article preview.xml"
+                ],
+                [
+                    {
+                        "portletId": "com_liferay_dynamic_data_lists_form_web_portlet_DDLFormPortlet",
+                        "portletPreferences": {
+                            "title": "Join our Email list",
+                            "fieldLabel": "Email"
+                        }
+                    }
+                ]
+            ],
+            "friendlyURL": "/Authors",
+            "layouts": [
+                {
+                    "friendlyURL": "/Justin",
+                    "layouts": [
+                        {
+                            "friendlyURL": "/Favorites",
+                            "name": "Favorites",
+                            "title": "Favorites"
+                        },
+                        {
+                            "friendlyURL": "/Baseball",
+                            "name": "Baseball",
+                            "title": "Baseball"
+                        }
+                    ],
+                    "name": "Justin",
+                    "title":"Justin"
+                },
+                {
+                    "friendlyURL": "/Katia",
+                    "name": "Katia",
+                    "title": "Katia"
+                }
+            ],
+            "layoutTemplateId": "category",
+            "name": "Authors",
+            "title": "Authors"
+        },
+        {
+            "friendlyURL": "/Filler",
+            "name": "filler",
+            "title": "filler"
         }
     ]
 }

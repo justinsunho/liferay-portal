@@ -15,16 +15,27 @@
 					.article-subtitle {
 						color: #A9A9A9;
 						font-style: italic;
+						font-size: 14pt;
 					}
 				</style>
-				The quest for "quantum supremacy" -- unambiguous proof that a quantum computer does something faster than an ordinary computer -- has paradoxically led to a boom in quasi-quantum classical algorithms.
+				<p class="article-subtitle"> The quest for "quantum supremacy" -- unambiguous proof that a quantum computer does something faster than an ordinary computer -- has paradoxically led to a boom in quasi-quantum classical algorithms.</p>
 			]]>
 		</dynamic-content>
 	</dynamic-element>
 	<dynamic-element index="0" index-type="keyword" name="content" type="text_area">
 		<dynamic-content language-id="en_US">
 			<![CDATA[
-				A popular misconception is that the potential — and the limits — of quantum computing must come from hardware. In the digital age, we’ve gotten used to marking advances in clock speed and memory. Likewise, the 50-qubit quantum machines now coming online from the likes of Intel and IBM have inspired predictions that we are nearing “quantum supremacy” — a nebulous frontier where quantum computers begin to do things beyond the ability of classical machines.
+			<style type="text/css">
+				.capital-letter-content {
+					display: inline;
+				}
+				.article-content {
+					padding-top: 40px;
+				}
+			</style>
+
+			<p class="article-content">
+				<h3 class="capital-letter-content">A </h3> popular misconception is that the potential — and the limits — of quantum computing must come from hardware. In the digital age, we’ve gotten used to marking advances in clock speed and memory. Likewise, the 50-qubit quantum machines now coming online from the likes of Intel and IBM have inspired predictions that we are nearing “quantum supremacy” — a nebulous frontier where quantum computers begin to do things beyond the ability of classical machines.
 				<br>
 				But quantum supremacy is not a single, sweeping victory to be sought — a broad Rubicon to be crossed — but rather a drawn-out series of small duels. It will be established problem by problem, quantum algorithm versus classical algorithm. “With quantum computers, progress is not just about speed,” said Michael Bremner, a quantum theorist at the University of Technology Sydney. “It’s much more about the intricacy of the algorithms at play.”
 				<br>
@@ -50,7 +61,7 @@
 				It wasn’t, of course.
 				<br>
 				Even before anyone began tinkering with quantum hardware, theorists struggled to come up with suitable software. Early on, Feynman and David Deutsch, a physicist at the University of Oxford, learned that they could control quantum information with mathematical operations borrowed from linear algebra, which they called gates. As analogues to classical logic gates, quantum gates manipulate qubits in all sorts of ways — guiding them into a succession of superpositions and entanglements and then measuring their output. By mixing and matching gates to form circuits, the theorists could easily assemble quantum algorithms.
-
+			</p>
 			]]>
 		</dynamic-content>
 	</dynamic-element>

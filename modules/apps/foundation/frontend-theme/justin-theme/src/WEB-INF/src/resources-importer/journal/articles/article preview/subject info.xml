@@ -4,16 +4,6 @@
 	<dynamic-element index="0" index-type="keyword" name="image" type="text_area">
 		<dynamic-content language-id="en_US">
 			<![CDATA[
-				<style type="text/css">
-					#author-photo {
-						display: block;
-						border-radius: 50%;
-						max-width: 150px;
-						padding: 20px;
-					}
-				</style>
-				
-				<img id="author-photo" src="[$FILE=author_photo_1.jpg$]" alt="author photo" />
 			]]>
 		</dynamic-content>
 	</dynamic-element>
@@ -21,18 +11,25 @@
 		<dynamic-content language-id="en_US">
 			<![CDATA[
 				<style type="text/css">
-					.name-decorator {
-						display: block;
+					.mathematics {
+						font-size: 36pt;
 					}
 				</style>
-				<p class="name-decorator">Katia Moskvitch</p>
+				<p class="mathematics">Mathematics</p>
 			]]>
 		</dynamic-content>
 	</dynamic-element>
 	<dynamic-element index="0" index-type="keyword" name="content" type="text_area">
 		<dynamic-content language-id="en_US">
 			<![CDATA[
-				Contributing Writer. UCLA graduate. 
+				<style type="text/css">
+					.mathematics-description {
+						color: #A9A9A9;
+						font-size: 20pt;
+						font-style: italic;
+					}
+				</style>
+				<p class="mathematics-description"> From Fourier transforms to Graphs. Here's what's up in Mathematics. </p>
 			]]>
 		</dynamic-content>
 	</dynamic-element>

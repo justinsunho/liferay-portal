@@ -129,5 +129,9 @@ $grey: #EFEFEF;
 			@extend %grey-background;
 			margin-bottom: 30px;
 		}
+
+		.top-row {
+			padding-top: 200px;
+		}
 	}
 }
