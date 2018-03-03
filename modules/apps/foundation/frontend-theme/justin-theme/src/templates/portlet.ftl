@@ -10,19 +10,6 @@
 />
 
 <section class="portlet" id="portlet_${portlet_id}">
-	<div class="${portlet_content_css_class}">
-		<#if portlet_display.isShowBackIcon()>
-			<a class="icon-monospaced portlet-icon-back text-default" href="${portlet_back_url}" title="<@liferay.language key="return-to-full-page" />">
-				<@liferay_ui["icon"]
-					icon="angle-left"
-					markupView="lexicon"
-				/>
-			</a>
-		</#if>
-
-		${portlet_display.writeContent(writer)}
-	</div>
-	
 	<#if portlet_display.isPortletDecorate() && !portlet_display.isStateMax() && portlet_display.getPortletConfigurationIconMenu()?? && portlet_display.getPortletToolbar()??>
 		<#assign
 			portlet_configuration_icon_menu = portlet_display.getPortletConfigurationIconMenu()
@@ -54,4 +41,19 @@
 			<#assign portlet_content_css_class = portlet_content_css_class + " portlet-content-editable" />
 		</#if>
 	</#if>
+
+	<div class="${portlet_content_css_class}">
+		<#if portlet_display.isShowBackIcon()>
+			<a class="icon-monospaced portlet-icon-back text-default" href="${portlet_back_url}" title="<@liferay.language key="return-to-full-page" />">
+				<@liferay_ui["icon"]
+					icon="angle-left"
+					markupView="lexicon"
+				/>
+			</a>
+		</#if>
+
+		<h2 class="portlet-title-text">${portlet_title}</h2>
+
+		${portlet_display.writeContent(writer)}
+	</div>
 </section>
